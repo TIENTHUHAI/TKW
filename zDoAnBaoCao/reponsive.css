@@ -1,0 +1,14 @@
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .nav-item {
+        width: max-content;
+        margin-right: 12px;
+    }
+}
+
+
+@media screen and (min-width: 1200px) {
+    .nav-item {
+        width: max-content;
+        margin-right: 20px;
+    }
+}
