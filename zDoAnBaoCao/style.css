@@ -44,6 +44,7 @@ body {
 }
 
 .head-logo {
+    margin-right: 20px;
     width: 200px;
 }
 
@@ -221,7 +222,7 @@ body {
 
 /* NAVIGATION */
 #navigation {
-    position: relative;
+    position: fixed;
     top: 100px;
     width: 100%;
     height: 60px;
@@ -238,6 +239,7 @@ body {
 }
 
 .nav-deals {
+    margin-right: 20px;
     width: 200px;
     height: 100%;
     display: flex;
@@ -312,6 +314,8 @@ body {
     top: 100%;
     left: 0;
     padding: 0;
+    box-shadow: 2px 5px 10px #333;
+
 }
 
 .nav-item-cap2 {
@@ -362,6 +366,8 @@ body {
     padding: 0;
     margin-left: 4px;
     background-color: white;
+    box-shadow: 2px 5px 10px #333;
+
     z-index: 2;
 }
 
@@ -398,7 +404,7 @@ body {
 
 /* BANNER */
 #banner {
-    top: 100px;
+    top: 160px;
     position: relative;
     width: 100%;
     height: 450px;
@@ -417,7 +423,7 @@ body {
 /* Main */
 #main {
     position: relative;
-    top: 100px;
+    top: 180px;
 }
 
 .khuyen-mai-list {

@@ -130,50 +130,50 @@ loginLink.addEventListener('click', function() {
     }
 })
 
-//Js thêm vào giỏ
-let cacNutThemVaoGioHang = document.querySelectorAll('.buy');
+// //Js thêm vào giỏ
+// let cacNutThemVaoGioHang = document.querySelectorAll('.buy');
 
-cacNutThemVaoGioHang.forEach(function(nut) {
-    nut.addEventListener('click', function(event) {
-        // event.preventDefault();
-        let card = nut.closest('.card');
-        let anhSanPham = card.querySelector('.banchay-img img').getAttribute('src');
-        let tenSanPham = card.querySelector('.name-card').textContent.trim();
-        let giaSanPham = card.querySelector('.price-card').textContent.trim();
+// cacNutThemVaoGioHang.forEach(function(nut) {
+//     nut.addEventListener('click', function(event) {
+//         // event.preventDefault();
+//         let card = nut.closest('.card');
+//         let anhSanPham = card.querySelector('.banchay-img img').getAttribute('src');
+//         let tenSanPham = card.querySelector('.name-card').textContent.trim();
+//         let giaSanPham = card.querySelector('.price-card').textContent.trim();
 
-        let sanPhamMoi = document.createElement('a');
-        sanPhamMoi.setAttribute('href', '#');
-        sanPhamMoi.classList.add('sanpham-themvao');
+//         let sanPhamMoi = document.createElement('a');
+//         sanPhamMoi.setAttribute('href', '#');
+//         sanPhamMoi.classList.add('sanpham-themvao');
 
-        let hinhanhThongTin = document.createElement('div');
-        hinhanhThongTin.classList.add('hinhanh-thongtin');
+//         let hinhanhThongTin = document.createElement('div');
+//         hinhanhThongTin.classList.add('hinhanh-thongtin');
 
-        let anhHinhanh = document.createElement('div');
-        anhHinhanh.classList.add('hinhanh-sp');
+//         let anhHinhanh = document.createElement('div');
+//         anhHinhanh.classList.add('hinhanh-sp');
 
-        let img = document.createElement('img');
-        img.setAttribute('src', anhSanPham);
-        img.setAttribute('alt', '');
-        img.style.width = '70px';
-        img.style.height = '60px';
+//         let img = document.createElement('img');
+//         img.setAttribute('src', anhSanPham);
+//         img.setAttribute('alt', '');
+//         img.style.width = '70px';
+//         img.style.height = '60px';
 
-        let pTag = document.createElement('p');
-        pTag.textContent = tenSanPham;
+//         let pTag = document.createElement('p');
+//         pTag.textContent = tenSanPham;
 
-        let spanTag = document.createElement('span');
-        spanTag.textContent = giaSanPham;
-        spanTag.classList.add('text-red');
+//         let spanTag = document.createElement('span');
+//         spanTag.textContent = giaSanPham;
+//         spanTag.classList.add('text-red');
 
-        anhHinhanh.appendChild(img);
-        hinhanhThongTin.appendChild(anhHinhanh);
-        hinhanhThongTin.appendChild(pTag);
-        sanPhamMoi.appendChild(hinhanhThongTin);
-        sanPhamMoi.appendChild(spanTag);
+//         anhHinhanh.appendChild(img);
+//         hinhanhThongTin.appendChild(anhHinhanh);
+//         hinhanhThongTin.appendChild(pTag);
+//         sanPhamMoi.appendChild(hinhanhThongTin);
+//         sanPhamMoi.appendChild(spanTag);
 
-        let headingGioHang = document.querySelector('.heading-giohang');
-        headingGioHang.insertAdjacentElement('afterend', sanPhamMoi);
-    });
-});
+//         let headingGioHang = document.querySelector('.heading-giohang');
+//         headingGioHang.insertAdjacentElement('afterend', sanPhamMoi);
+//     });
+// });
     
 
 // Count Down
