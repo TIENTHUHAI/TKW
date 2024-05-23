@@ -8,6 +8,29 @@
     background-color: var(--red-pri-color);
 }
 
+.carousel-flash-sale {
+    display: flex;
+}
+
+.carousel-flash-sale .carousel-item {
+    display: block;
+    margin: 0;
+    flex: 0 0 calc((100% / 5));
+}
+
+
+.carousel-sanphan-banchay {
+    display: flex;
+}
+
+.carousel-sanphan-banchay .carousel-item {
+    display: block;
+    margin: 0;
+    flex: 0 0 calc((100% / 5));
+}
+
+
+
 body {
 
 }
@@ -445,6 +468,7 @@ body {
     /* text-align: center; */
 }
 
+
 .khuyen-mai-item h5 {
     margin: 0;
 }
@@ -455,11 +479,11 @@ body {
 
 .uudai-list-item {
     display: grid;
-    grid-template-columns: 50% 50% 50% 50%;
+    grid-template-columns: 50% 50%;
     grid-template-rows: 200px;
     padding: 10px 10px 10px 0;
     grid-gap: 10px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .prev-uudai-kh {
@@ -576,11 +600,11 @@ body {
     cursor: pointer;
 }
 
-.banchay-img:hover img {
+a:hover > .banchay-img > img {
     transform: translateY(-10px);
 }
 
-.card-title:hover {
+a:hover .card-title {
     color: blue;
 }
 

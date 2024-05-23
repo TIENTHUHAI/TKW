@@ -221,4 +221,24 @@ document.querySelectorAll('a[href="#danhmuc"]').forEach(a => {
     });
 });
 
-// Đăng ký nhận tin
+// Silder products J QUERY
+var carouselWidth = $('.carousel-flash-sale')[0].scrollWidth;
+var cardWidth = $('.carousel-item-flash-sale').innerWidth();
+
+var scrollPosition = 0;
+
+$('.carousel-control-next').on('click', function() {
+    if (scrollPosition < (carouselWidth - (cardWidth * 5))) {
+
+        scrollPosition = scrollPosition + cardWidth;
+        $('.carousel-flash-sale').animate({scrollLeft: scrollPosition}, 300);
+    }
+});
+
+$('.carousel-control-prev').on('click', function() {
+    if (scrollPosition > 0) {
+
+        scrollPosition = scrollPosition - cardWidth;
+        $('.carousel-flash-sale').animate({scrollLeft: scrollPosition}, 300);
+    }
+});

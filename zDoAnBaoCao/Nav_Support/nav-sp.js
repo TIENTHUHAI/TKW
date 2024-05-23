@@ -58,6 +58,8 @@ form2.addEventListener('submit', function(e) {
     let isEmailError = checkEmailError(email);
 })
 
+
+// Đăng ký đăng nhập
 const loginRegister = document.querySelector('.user-login-register');
 const formLoginRegister = document.getElementById('wrapper');
 const formBox = document.getElementById('form-box1');

@@ -841,33 +841,33 @@
     </div>
     
     <!-- banner -->
-    <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="height: 450px; top: 100px;">
+    <div id="banner" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="top: 160px;">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="accest/image/bannerDienThoai.jpg" class="d-block w-100" style="height: 450px;" alt="...">
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-item-sanphan-banchay p-2">
             <img src="accest/image/bannerDienThoai2.jpg" class="d-block w-100" style="height: 450px;" alt="...">
           </div>
-          <div class="carousel-item">
+          <div class="carousel-item carousel-item-sanphan-banchay p-2">
             <img src="accest/image/bannerDienThoai3.jpg" class="d-block w-100" style="height: 450px;" alt="...">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#banner" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#banner" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div> -->
+    </div>
 
-    <div id="banner">
+    <!-- <div id="banner">
         <img src="accest/image/bannerDienThoai.jpg" alt="">
         <img src="accest/image/bannerDienThoai2.jpg" alt="">
         <img src="accest/image/bannerDienThoai3.jpg" alt="">
-    </div>
+    </div> -->
     
 
     <div id="main">
@@ -896,7 +896,42 @@
             
             <!-- Tin nổi bật -->
             <h2 class="text-center mt-50" style="color: #ee233f;">ƯU ĐÃI KHÁCH HÀNG</h2>
-            <div class="uudai-khachhang">   
+            <div id="uudai-khachhang" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active uudai-khachhang">
+                        <div class="uudai-list-item">
+                            <a href="">
+                                <img class="image-noibat border border-2 rounded border-danger" src="accest/image/noibat1.jpg" alt="">
+                            </a>
+                            <a href="">
+                                <img class="image-noibat border border-2 rounded border-primary" src="accest/image/noibat2.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                        <div class="uudai-list-item">
+                            <a href="">
+                                <img class="image-noibat border border-2 rounded border-primary" src="accest/image/noibat3.jpg" alt="">
+                            </a>
+                            <a href="">
+                                <img class="image-noibat border border-2 rounded border-danger" src="accest/image/noibat4.jpg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="prev-uudai-kh" type="button" data-bs-target="#uudai-khachhang" data-bs-slide="prev">
+                    <div class="">
+                        <i class="text-primary fa-solid fa-angle-left"></i>
+                    </div>
+                </button>
+                <button class="next-uudai-kh" type="button" data-bs-target="#uudai-khachhang" data-bs-slide="next">
+                    <div class="">
+                        <i class="text-primary fa-solid fa-angle-right"></i>
+                    </div>
+                </button>
+            </div>
+
+            <!-- <div class="uudai-khachhang">   
                 <div class="prev-uudai-kh">
                     <i class="text-primary fa-solid fa-angle-left"></i>
                 </div>
@@ -917,34 +952,26 @@
                 <div class="next-uudai-kh">
                     <i class="text-primary fa-solid fa-angle-right"></i>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Sản phẩm bán chạy -->
             <div class="sp-banchay border rounded bg-primary p-3 mt-50">
                 <div class="bg-primary p-2">
                     <h2 class="text-center text-white m-0">SẢN PHẨM BÁN CHẠY</h2>
                 </div>
-                <!-- Prev -->
-                <div class="prev-banchay">
-                    <i class="text-primary fa-solid fa-angle-left"></i>
-                </div>
-                <!-- Next -->
-                <div class="next-banchay">
-                    <i class="text-primary fa-solid fa-angle-right"></i>
-                </div>
-                <div class="d-grid gap-2">
-                    <div class="row g-2 row-cols-6 row-md-cols-3">
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                <div id="carousel-banchay" class="carousel">
+                    <div class="carousel-inner carousel-sanphan-banchay">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/iphone13.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             iPhone 13 128GB
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         13.890.000₫
                                     </h5>
@@ -955,19 +982,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/dongho.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center h-100">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Apple Watch SE 2023 GPS 40mm viền nhôm dây thể thao siêu ₫ẹp luôn
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         5.990.000₫
                                     </h5>
@@ -978,19 +1005,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/camera-giamsat.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Camera IP 360 Độ 2MP Ezviz C6N 
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         370.000₫
                                     </h5>
@@ -1001,19 +1028,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/tablet-1.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center h-100">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Máy tính bảng iPad 10 WiFi 64GB 
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         10.590.000₫
                                     </h5>
@@ -1024,19 +1051,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/galaxy.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Samsung Galaxy S23 Ultra 5G 256GB
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         20.890.000₫
                                     </h5>
@@ -1047,19 +1074,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/iphone15.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             iPhone 15 Pro Max 256GB
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         29.890.000₫
                                     </h5>
@@ -1070,20 +1097,22 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <!-- Hàng 2 -->
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                    </div>
+
+                    <div class="carousel-inner carousel-sanphan-banchay">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/macbook.jpb.webp" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Laptop Apple MacBook Air 13 inch M1 2020 8-core CPU/8GB/256GB/7-core GPU (MGN63SA/A)
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         18.690.000₫
                                     </h5>
@@ -1094,19 +1123,21 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/lenovo.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center h-100">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Laptop Lenovo Ideapad 3 15IAU7 i3 1215U/8GB/256GB/Win11 (82RK005LVN)
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         8.590.000₫
                                     </h5>
@@ -1117,19 +1148,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/taingheava.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Loa Bluetooth AVA+ MiniPod Y23
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         90.000₫ 
                                     </h5>
@@ -1140,19 +1171,65 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
+                                <div class="banchay-img text-center">
+                                    <img class="" src="accest/image/taingheava.jpg" alt="" style="height: 200px; width: 100%;">
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="text-black">
+                                        <h5 class="card-title">
+                                            Loa Bluetooth AVA+ MiniPod Y23
+                                        </h5>
+                                    </div>
+                                    <h5 class="card-subtitle text-danger mt-2">
+                                        90.000₫ 
+                                    </h5>
+                                    <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                        <span class="me-4 fs-6 text-decoration-line-through">190.000₫</span>
+                                        <div class="fs-6 sale-off ml-3 ">
+                                            -52%
+                                        </div>
+                                    </h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
+                                <div class="banchay-img text-center">
+                                    <img class="" src="accest/image/taingheava.jpg" alt="" style="height: 200px; width: 100%;">
+                                </div>
+                                <div class="card-body text-center">
+                                    <div class="text-black">
+                                        <h5 class="card-title">
+                                            Loa Bluetooth AVA+ MiniPod Y23
+                                        </h5>
+                                    </div>
+                                    <h5 class="card-subtitle text-danger mt-2">
+                                        90.000₫ 
+                                    </h5>
+                                    <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                        <span class="me-4 fs-6 text-decoration-line-through">190.000₫</span>
+                                        <div class="fs-6 sale-off ml-3 ">
+                                            -52%
+                                        </div>
+                                    </h5>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/tainghexiaomi.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Tai nghe Bluetooth True Wireless Xiaomi Redmi Buds 5
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         890.000₫
                                     </h5>
@@ -1163,19 +1240,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/dongho3.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Đồng hồ CASIO 22 mm Nữ LTP-1169D-1ARDF
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         690.000₫
                                     </h5>
@@ -1186,19 +1263,19 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
-                        <div class="col">
-                            <div class="card pt-4 h-100">
+                        <div class="carousel-item carousel-item-sanphan-banchay p-2">
+                            <a href="" class="card text-decoration-none pt-4 h-100">
                                 <div class="banchay-img text-center">
                                     <img class="" src="accest/image/loa-gbl.jpg" alt="" style="height: 200px; width: 100%;">
                                 </div>
                                 <div class="card-body text-center">
-                                    <a class="text-decoration-none text-black" href="">
+                                    <div class="text-black">
                                         <h5 class="card-title">
                                             Pin sạc dự phòng 10000mAh Type C PD QC3.0 22.5W Xmobile T121
                                         </h5>
-                                    </a>
+                                    </div>
                                     <h5 class="card-subtitle text-danger mt-2">
                                         480.000₫
                                     </h5>
@@ -1209,17 +1286,26 @@
                                         </div>
                                     </h5>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
+                    <button class="carousel-control-prev prev-banchay" type="button" data-bs-target="#carousel-banchay" data-bs-slide="prev">
+                        <div class="">
+                            <i class="text-primary fa-solid fa-angle-left"></i>
+                        </div>
+                    </button>
+                    <button class="carousel-control-next next-banchay" type="button" data-bs-target="#carousel-banchay" data-bs-slide="next">
+                        <div class="">
+                            <i class="text-primary fa-solid fa-angle-right"></i>
+                        </div>
+                    </button>
                 </div>
             </div>
+            
 
             <!-- Flash sale -->
-            <div class="flash-sale border rounded p-3 mt-50" style="background-color: #ee233f">
-                <div class="prev-flash-sale">
-                    <i class="text-primary fa-solid fa-angle-left"></i>
-                </div>
+
+            <div class="flash-sale border py-3 rounded mt-50" style="background-color: #ee233f; overflow: hidden;">
                 <div class="bg-red-pri p-2 text-white d-flex align-items-center">
                     <div class="flash-sale-head d-flex align-items-center">
                         <i class="fa-solid fa-bolt fs-3 me-2"></i>
@@ -1234,164 +1320,389 @@
                     </div>
                 </div>
 
-                <div class="d-grid p-2">
-                    <div class="row g-3 gap-3">
-                        <div class="col card border rounded bg-white p-3 pb-0" style="position: relative;">
-                            <div class="giam-gia">
-                                <span> GIẢM 14%</span>
-                                <div class="tam-giac">
-                                </div>
-                            </div>
-                            <div class="banchay-img text-center">
-                                <img class="" src="accest/image/iphone15.jpg" alt="" style="height: 120px; width: 120px;">
-                            </div>
-                            <div class="card-body text-center">
-                                <a class="text-decoration-none text-black" href="">
-                                    <h5 class="name-card card-title mt-2">
-                                        iPhone 15 Pro Max 256GB
-                                    </h5>
-                                </a>
-                                <h5 class="price-card card-subtitle text-danger mt-2">
-                                    29.890.000₫
-                                </h5>
-                                <h5 class="price mt-2 d-flex justify-content-center align-items-center">
-                                    <span class="me-4 fs-6 text-decoration-line-through">34.990.000₫</span>
-                                    <div class="fs-6 sale-off ml-3 ">
-                                        -14%
+                <div id="carousel-Flash-Sale" class="carousel">
+                    <div class="carousel-inner carousel-flash-sale d-flex justify-content-start">
+                        <!-- Item 1 -->
+                        <div class="carousel-item carousel-item-flash-sale active">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 14%</span>
+                                        <div class="tam-giac">
+                                        </div>
                                     </div>
-                                </h5>
-                                <a href="#" class="buy mt-2 btn btn-danger">
-                                    <span>Xem chi tiết</span>
-                                </a>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/iphone15.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    iPhone 15 Pro Max 256GB
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                29.890.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">34.990.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -14%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col card border rounded bg-white p-3 pb-0" style="position: relative;">
-                            <div class="giam-gia">
-                                <span> GIẢM 38%</span>
-                                <div class="tam-giac">
-                                </div>
-                            </div>
-                            <div class="banchay-img text-center">
-                                <img class="" src="accest/image/lenovo.jpg" alt="" style="height: 120px; width: 120px;">
-                            </div>
-                            <div class="card-body text-center">
-                                <a class="text-decoration-none text-black" href="">
-                                    <h5 class="name-card card-title mt-2">
-                                        Laptop Lenovo Ideapad 3 15IAU7 i3 1215U/8GB/256GB/Win11 (82RK005LVN)
-                                    </h5>
-                                </a>
-                                <h5 class="price-card card-subtitle text-danger mt-2">
-                                    8.590.000₫
-                                </h5>
-                                <h5 class="price mt-2 d-flex justify-content-center align-items-center">
-                                    <span class="me-4 fs-6 text-decoration-line-through">13.890.000₫</span>
-                                    <div class="fs-6 sale-off ml-3 ">
-                                        -38%
+                        <!-- Item 2 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 38%</span>
+                                        <div class="tam-giac">
+                                        </div>
                                     </div>
-                                </h5>
-                                <a href="#" class="buy mt-2 btn btn-danger">
-                                    <span>Xem chi tiết</span>
-                                </a>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/lenovo.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Laptop Lenovo Ideapad 3 15IAU7 i3 1215U/8GB/256GB/Win11 (82RK005LVN)
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                8.590.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">13.890.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -38%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col card border rounded bg-white p-3 pb-0" style="position: relative;">
-                            <div class="giam-gia">
-                                <span> GIẢM 9%</span>
-                                <div class="tam-giac">
-                                </div>
-                            </div>
-                            <div class="banchay-img text-center">
-                                <img class="" src="accest/image/iphone15plus.jpg" alt="" style="height: 120px; width: 120px;">
-                            </div>
-                            <div class="card-body text-center">
-                                <a class="text-decoration-none text-black" href="">
-                                    <h5 class="name-card card-title mt-2">
-                                        Điện thoại iPhone 15 Plus 128GB
-                                    </h5>
-                                </a>
-                                <h5 class="price-card card-subtitle text-danger mt-2">
-                                    23.490.000₫
-                                </h5>
-                                <h5 class="price mt-2 d-flex justify-content-center align-items-center">
-                                    <span class="me-4 fs-6 text-decoration-line-through">25.990.000₫</span>
-                                    <div class="fs-6 sale-off ml-3 ">
-                                        -9%
+                        <!-- Item 3 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 9%</span>
+                                        <div class="tam-giac">
+                                        </div>
                                     </div>
-                                </h5>
-                                <a href="#" class="buy mt-2 btn btn-danger">
-                                    <span>Xem chi tiết</span>
-                                </a>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/iphone15plus.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Điện thoại iPhone 15 Plus 128GB
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                23.490.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">25.990.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -9%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col card border rounded bg-white p-3 pb-0" style="position: relative;">
-                            <div class="giam-gia">
-                                <span> GIẢM 36%</span>
-                                <div class="tam-giac">
-                                </div>
-                            </div>
-                            <div class="banchay-img text-center">
-                                <img class="" src="accest/image/acer.jpg" alt="" style="height: 120px; width: 120px;">
-                            </div>
-                            <div class="card-body text-center">
-                                <a class="text-decoration-none text-black" href="">
-                                    <h5 class="name-card card-title mt-2">
-                                        Laptop Acer Gaming Nitro 5 AN515 57 53F9 i5 11400H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QENSV.008)
-                                    </h5>
-                                </a>
-                                <h5 class="price-card card-subtitle text-danger mt-2">
-                                    15.990.000₫
-                                </h5>
-                                <h5 class="price mt-2 d-flex justify-content-center align-items-center">
-                                    <span class="me-4 fs-6 text-decoration-line-through">24.990.000₫</span>
-                                    <div class="fs-6 sale-off ml-3 ">
-                                        -36%
+                        <!-- Item 4 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 36%</span>
+                                        <div class="tam-giac">
+                                        </div>
                                     </div>
-                                </h5>
-                                <a href="#" class="buy mt-2 btn btn-danger">
-                                    <span>Xem chi tiết</span>
-                                </a>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/acer.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Laptop Acer Gaming Nitro 5 AN515 57 53F9 i5 11400H/8GB/512GB/4GB RTX3050/144Hz/Win11 (NH.QENSV.008)
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                15.990.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">24.990.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -36%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col card border rounded bg-white p-3 pb-0" style="position: relative;">
-                            <div class="giam-gia">
-                                <span> GIẢM 39%</span>
-                                <div class="tam-giac">
+                        <!-- Item 5 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 39%</span>
+                                        <div class="tam-giac">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/dongho2.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Đồng hồ thông minh BeFit WatchFit 46.7mm
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                540.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">890.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -39%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="banchay-img text-center">
-                                <img class="" src="accest/image/dongho2.jpg" alt="" style="height: 120px; width: 120px;">
-                            </div>
-                            <div class="card-body text-center">
-                                <a class="text-decoration-none text-black" href="">
-                                    <h5 class="name-card card-title mt-2">
-                                        Đồng hồ thông minh BeFit WatchFit 46.7mm
-                                    </h5>
-                                </a>
-                                <h5 class="price-card card-subtitle text-danger mt-2">
-                                    540.000₫
-                                </h5>
-                                <h5 class="price mt-2 d-flex justify-content-center align-items-center">
-                                    <span class="me-4 fs-6 text-decoration-line-through">890.000₫</span>
-                                    <div class="fs-6 sale-off ml-3 ">
-                                        -39%
+                        </div>
+
+                        <!-- Item 6 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 14%</span>
+                                        <div class="tam-giac">
+                                        </div>
                                     </div>
-                                </h5>
-                                <a href="#" class="buy mt-2 btn btn-danger">
-                                    <span>Xem chi tiết</span>
-                                </a>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/flash-sale-1.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Điện thoại Tecno Spark Go 2024 
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                1.690.000₫  
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">1.890.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -10%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 7 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 38%</span>
+                                        <div class="tam-giac">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/flash-sale-2.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Laptop Acer Aspire 3 A314 35 P3G9 N6000/4GB/256GB/Win11 (NX.A7SSV.007)
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                6.990.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">7.990.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -12%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 8 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 9%</span>
+                                        <div class="tam-giac">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/flash-sale-3.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Đồng hồ MVW 44 mm Nam MS077-03 
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                490.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">2.000.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -75%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 9 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 36%</span>
+                                        <div class="tam-giac">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/flash-sale-4.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Laptop Acer Gaming Aspire 7 A715 76G 59MW i5 12450H/8GB/512GB/4GB RTX2050/144Hz/Win11 (NH.QMYSV.001)
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                17.490.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">21.490.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -18%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 10 -->
+                        <div class="carousel-item carousel-item-flash-sale">
+                            <div class="mx-2">
+                                <div class="bg-white pt-3 rounded-3" style="position: relative;">
+                                    <div class="giam-gia">
+                                        <span> GIẢM 39%</span>
+                                        <div class="tam-giac">
+                                        </div>
+                                    </div>
+                                    <a href="#" class="card text-decoration-none" style="outline: none; border: none;">
+                                        <div class="banchay-img text-center">
+                                            <img class="" src="accest/image/flash-sale-5.jpg" alt="" style="height: 120px; width: 120px;">
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <div class="text-black" href="">
+                                                <h5 class="name-card card-title mt-2">
+                                                    Adapter sạc USB 12W AVA+ ASUC01 
+                                                </h5>
+                                            </div>
+                                            <h5 class="price-card card-subtitle text-danger mt-2">
+                                                100.000₫
+                                            </h5>
+                                            <h5 class="price mt-2 d-flex justify-content-center align-items-center">
+                                                <span class="me-4 fs-6 text-decoration-line-through">170.000₫</span>
+                                                <div class="fs-6 sale-off ml-3 ">
+                                                    -41%
+                                                </div>
+                                            </h5>
+                                            <div href="#" class="buy mt-2 btn btn-danger">
+                                                <span>Xem chi tiết</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <button class="carousel-control-prev prev-flash-sale" type="button" data-bs-target="#carousel-Flash-Sale" data-bs-slide="prev">
+                        <div class="">
+                            <i class="text-primary fa-solid fa-angle-left"></i>
+                        </div>
+                    </button>
+                    <button class="carousel-control-next next-flash-sale" type="button" data-bs-target="#carousel-Flash-Sale" data-bs-slide="next">
+                        <div class="">
+                            <i class="text-primary fa-solid fa-angle-right"></i>
+                        </div>
+                    </button>
                 </div>
                 <div class="row mt-2 d-flex justify-content-center">
                     <div class="btn btn-light text-primary p-2" style="width: 200px; font-weight: 600;">
                         <a href="" class="text-decoration-none">Xem tất cả</a>
                     </div>
                 </div>
-                <div class="next-flash-sale">
-                    <i class="text-primary fa-solid fa-angle-right"></i>
-                </div>
             </div>
+
+            
 
             <!-- Danh mục sản phẩm -->
             <div id="danhmuc" name="danhmuc" class="rounded p-3 mt-50" style="background-color: #f3f3f3;">
@@ -1603,7 +1914,7 @@
                 </div>
 
                 <div class="row">
-                    <div class="col">
+                    <div class="">
                         <h6 class="fw-bold text-white">Tổng đài hỗ trợ</h6>
                         <ul class="footer-list">
                             <li>
@@ -1699,7 +2010,7 @@
                         </ul>
                     </div>
 
-                    <div class="col">
+                    <div class="">
                         <h6 class="fw-bold text-white">Thông tin và chính sách</h6>
                         <ul class="footer-list">
                             <li>
@@ -1750,7 +2061,7 @@
                         </ul>
                     </div>
 
-                    <div class="col">
+                    <div class="">
                         <h6 class="fw-bold text-white">Sản phẩm và Dịch vụ</h6>
                         <ul class="footer-list">
                             <li>
@@ -1781,7 +2092,7 @@
                         </ul>
                     </div>  
 
-                    <div class="col">
+                    <div class="">
                         <h6 class="fw-bold text-white">Giới thiệu</h6>
                         <ul class="footer-list">
                             <li>
@@ -1812,7 +2123,7 @@
                         </ul>
                     </div>
 
-                    <div class="col">
+                    <div class="">
                         <h6 class="fw-bold text-white">Hỗ trợ và Hỏi đáp</h6>
                         <ul class="footer-list">
                             <li>
@@ -1860,7 +2171,7 @@
 
 
 
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="accest/bootstrap/js/bootstrap.min.js"></script>
     <!-- Custom JS -->
