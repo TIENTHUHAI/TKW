@@ -9,21 +9,11 @@
     <link rel="stylesheet" href="accest/bootstrap/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styleChiTietSp.css">
+    <link rel="stylesheet" href="styleDanhMuc.css">
     <link rel="stylesheet" href="reponsive.css">
     <title>Document</title>
 
     <style>
-        .line{
-            width: 100%;
-            height: 1px;
-            background-color: gainsboro;
-        }
-        .st{
-            font-size: 13px;
-            margin-left: 5px;
-        }
-
         .mt-50 {
             margin-top: 50px;
         }
@@ -50,7 +40,16 @@
             margin: 0;
         }
 
-        
+        .deal-apple {
+            display: flex;
+            align-items: center;
+            color: white;
+            background: linear-gradient(to right, #ef3006, #c60004);
+            width: max-content;
+            border-radius: 30px;
+            font-size: 12px;
+            padding: 2px;
+        } 
         
         .thongtin-giohang {
             display: none;
@@ -62,7 +61,6 @@
             top: 40px;
             right: 0;
             opacity: 1;
-
         }
 
         .thongtin-giohang::before {
@@ -87,14 +85,10 @@
             color: #333;
         }
 
-        .sanpham-themvao > span {
+        .sanpham-themvao span {
             width: 100px;
             font-size: 14px;
             text-align: end;
-        }
-
-        #gia-sp-gio-hang {
-            margin-left: 16px;
         }
 
         .hinhanh-thongtin {
@@ -118,11 +112,6 @@
             margin-top: 8px;
             text-align: end;
         }
-
-
-        /* Zoom */
-        
-
     </style>
 </head>
 <body>
@@ -179,10 +168,7 @@
                                 <div class="heading-giohang">
                                     <h5>Sản phẩm mới thêm vào giỏ</h5>     
                                 </div>
-                                <div class="sanpham-giohang">
-                                    
-                                </div>
-                                <!-- <a href="" class="sanpham-themvao">
+                                <a href="" class="sanpham-themvao">
                                     <div class="hinhanh-thongtin">
                                         <div class="hinhanh-sp" style="height: 60px; width: 70px;">
                                             <img src="../accest/image/iphone13.jpg" alt="" style="width: 70px; height: 60px; border: 1px solid #ccc; padding: 0 2px;">
@@ -208,7 +194,7 @@
                                         <p>Đồng hồ thông minh BeFit WatchFit 46.7mm</p>
                                     </div>
                                     <span class="text-red">540.000₫</span>
-                                </a> -->
+                                </a>
                                 <div class="chitiet-giohang">
                                     <a href="" class="btn btn-sm btn-primary">Chi tiết giỏ hàng</a>
                                 </div>
@@ -334,14 +320,16 @@
                             Tất cả sản phẩm
                         </a></li>
                     <li class="nav-item fs-5 nav-item-cap1">
-                        <a class="has-child" href="#danhmuc">
+                        <a class="has-child" href="danhMuc.html">
                             Danh mục
                             <i class="fa-solid fa-chevron-down"></i>
                         </a>
                         <ul class="nav-list-cap2">
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Điện thoại
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner loai-dien-thoai">
+                                        Điện thoại
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -351,14 +339,14 @@
                                                 <li class="col-4">
                                                     <h6>Thương hiệu</h6>
                                                     <div class="container"  >
-                                                        <a class="row py-1">iPhone</a>
-                                                        <a class="row py-1">Samsung</a>
-                                                        <a class="row py-1">OPPO</a>
-                                                        <a class="row py-1">Xiaomi</a>
-                                                        <a class="row py-1">realme</a>
-                                                        <a class="row py-1">ASUS</a>
-                                                        <a class="row py-1">Vivo</a>
-                                                        <a class="row py-1">Nokia</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">iPhone</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">OPPO</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">realme</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">ASUS</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Vivo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Nokia</a>
                                                     </div>
                                                 </li>
                                                 <li class="col-4">
@@ -394,8 +382,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Laptop
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Laptop
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -405,16 +395,16 @@
                                                 <li class="col-4">
                                                     <h6>Thương hiệu</h6>
                                                     <div class="container"  >
-                                                        <a class="row py-1">Mac</a>
-                                                        <a class="row py-1">ASUS</a>
-                                                        <a class="row py-1">Lenovo</a>
-                                                        <a class="row py-1">Dell</a>
-                                                        <a class="row py-1">Acer</a>
-                                                        <a class="row py-1">HP</a>
-                                                        <a class="row py-1">MSI</a>
-                                                        <a class="row py-1">LG</a>
-                                                        <a class="row py-1">Gigabyte</a>
-                                                        <a class="row py-1">Huawei</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Mac</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">ASUS</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Lenovo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Dell</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Acer</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">HP</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">MSI</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">LG</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Gigabyte</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Huawei</a>
                                                     </div>
                                                 </li>
                                                 <li class="col-4">
@@ -459,8 +449,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Tablet
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Tablet
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -470,14 +462,14 @@
                                                 <li class="col-4">
                                                     <h6>Thương hiệu</h6>
                                                     <div class="container"  >
-                                                        <a class="row py-1">iPad</a>
-                                                        <a class="row py-1">Samsung</a>
-                                                        <a class="row py-1">OPPO</a>
-                                                        <a class="row py-1">Xiaomi</a>
-                                                        <a class="row py-1">Lenovo</a>
-                                                        <a class="row py-1">Masstel</a>
-                                                        <a class="row py-1">Mobell</a>
-                                                        <a class="row py-1">Honor</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">iPad</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">OPPO</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Lenovo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Masstel</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Mobell</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Honor</a>
                                                     </div>
                                                 </li>
                                                 <li class="col-4">
@@ -509,8 +501,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Đồng hồ
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Đồng hồ
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -520,14 +514,14 @@
                                                 <li class="col-4">
                                                     <h6 class="">Chọn theo thương hiệu</h6>
                                                     <div class="container"  >
-                                                        <a class="row py-1">Apple Watch</a>
-                                                        <a class="row py-1">Samsung</a>
-                                                        <a class="row py-1">Xiaomi</a>
-                                                        <a class="row py-1">Huawei</a>
-                                                        <a class="row py-1">Coros</a>
-                                                        <a class="row py-1">Gamin</a>
-                                                        <a class="row py-1">Soundpeals</a>
-                                                        <a class="row py-1">Oppo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Apple Watch</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Huawei</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Coros</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Gamin</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Soundpeals</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Oppo</a>
                                                     </div>
                                                 </li>
                                                 <li class="col-4">
@@ -559,8 +553,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Loa, tai nghe
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Loa, tai nghe
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -620,8 +616,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Camera, Máy ảnh 
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Camera, Máy ảnh 
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -660,8 +658,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Phụ kiện 
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Phụ kiện 
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -712,8 +712,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Hàng cũ 
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Hàng cũ 
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -793,8 +795,10 @@
                                 </ul>
                             </li>
                             <li class="nav-item-cap2">
-                                <a href="">
-                                    Khuyến mãi 
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Khuyến mãi 
+                                    </span>
                                     <i class="fa-solid fa-chevron-right"></i>
                                 </a>
                                 <ul class="nav-list-cap3">
@@ -863,369 +867,927 @@
         </div>
     </div>
 
-    <div class="container" style="margin-top: 180px;">
-        <div class="row">
-            <div class="col-12">
-                <h5 id="product-name">Điện thoại iPhone 13 128GB</h5>
-                <div class="line"></div>
+    <!-- Danh muc -->
+    <div id="danhmuc-chitiet" class="container" style="margin-top: 180px;">
+        <h4>Bộ lọc</h4>
+        <br>
+        <div class="loc">
+            <div class="loc-item">
+                <div class="loc-title">
+                    <span>Hãng</span>
+                </div>
+                <div class="loc-item-menu">
+                    <div class="item-fill">
+                        <a href="#" class="brand-filter" data-brand="samsung">
+                            <img src="../accest/image/logo-samsung.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="iphone">
+                            <img src="../accest/image/logo-iphone.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="oppo">
+                            <img src="../accest/image/logo-oppo.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="xiaomi">
+                            <img src="../accest/image/logo-xiaomi.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="vivo">
+                            <img src="../accest/image/logo-vivo.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="realme">
+                            <img src="../accest/image/logo-realme.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="nokia">
+                            <img src="../accest/image/logo-nokia.jpg" style="width: 60px; height: 18px;" alt="">
+                        </a>
+                        <a href="#" class="brand-filter" data-brand="asus">
+                            <img src="../accest/image/logo-asus.jpg" style="width: 36px; height: 12px;" alt="">
+                        </a>
+                    </div>
+                    <div class="">
+                        <div class="btn btn-danger huy-ket-qua" style="height: 32px; font-size: 14px;">Bỏ chọn</div>
+                        <div class="btn btn-primary show-ket-qua" style="height: 32px; font-size: 14px;">Xem kết quả</div>
+                    </div>
+                </div>
             </div>
+            
+            <div class="loc-item">
+                <div class="loc-title">
+                    <span>Giá</span>
+                </div>
+                <div class="loc-item-menu">
+                    <div class="item-fill">
+                        <button id="duoi-2-trieu">Dưới 2 triệu</button>
+                        <button id="tu-2-den-4">Từ 2 - 4 triệu</button>
+                        <button id="tu-4-den-7">Từ 4 - 7 triệu</button>
+                        <button id="tu-7-den-10">Từ 7 - 10 triệu</button>
+                        <button id="tu-10-den-12">Từ 10 - 12 triệu</button>
+                        <button id="tu-12-den-16">Từ 12 - 16 triệu</button>
+                        <button id="tu-16-den-20">Từ 16 - 20 triệu</button>
+                        <button id="tren-20-trieu">Trên 20 triệu</button>
+                    </div>
+                    <div class="">
+                        <div class="btn btn-danger huy-ket-qua" style="height: 32px; font-size: 14px;">Bỏ chọn</div>
+                        <div class="btn btn-primary show-ket-qua" style="height: 32px; font-size: 14px;">Xem kết quả</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="loc-item">
+                <div class="loc-title">
+                    <span>Loại</span>
+                </div>
+                <div class="loc-item-menu loc-theo-loai">
+                    <div class="item-fill">
+                        <button id="loai-android">Android</button>
+                        <button id="loai-ios">IOS</button>
+                        <button id="loai-phothong">Phổ thông</button>
+                    </div>
+                    <div class="">
+                        <div class="btn btn-danger huy-ket-qua" style="height: 32px; font-size: 14px;">Bỏ chọn</div>
+                        <div class="btn btn-primary show-ket-qua" style="height: 32px; font-size: 14px;">Xem kết quả</div>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="row">
-            <div class="col-7 mt-3">
-                <div id="product-container">
-                    <iframe class="product-image" src="https://www.youtube.com/embed/A7qIRbLj8bk" title="Đánh giá chi tiết iPhone 13: lại là chiếc iPhone QUỐC DÂN !? | Thế Giới Di Động" 
-                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                    </iframe>
-                    <img id="product-image" style="display: none;" src="" alt="">
+        <div class="sapxep" style="float: right;">
+            <select id="sortProducts" style="height: 36px; border-radius: 10px; padding: 0 8px; outline: none;">
+                <option value="default" selected >Sắp xếp theo:</option>
+                <option value="lowToHigh">Giá thấp đến cao</option>
+                <option value="highToLow">Giá cao đến thấp</option>
+                <option value="DescPercent">% giảm dần</option>
+                <option value="AtoZ">Từ A - Z</option>
+                <option value="ZtoA">Từ Z - A</option>
+            </select>
+        </div>        
+    </div>
+
+    <div id="cuahang" class="" style="margin-top: 120px;">
+        <div class="container">
+            <!-- <div class="heading-tag">
+                <h2 style="margin: 0;">ĐIỆN THOẠI</h2>
+                <div class="list-tag">  
+                    <a href="">Apple</a>
+                    <a href="">SamSung</a>
+                    <a href="">XiaoMi</a>
+                    <a href="">Apple</a>
+                    <a href="">OPPO</a>
+                    <a href="">vivo</a>
+                    <a href="">realme</a>
+                    <a href="">Xem tất cả</a>
                 </div>
-                <a href="#">Xem tất cả điểm nổi bật</a>
-                <div class="noibat">
-                    <div class="item-noibat">
-                        <a href="#"><img src="../accest/image/icon-nb1.jpg" alt=""></a>
-                        <p>Điểm nổi bật</p>
-                    </div>
-                    <div class="item-noibat video-item-noibat">
-                        <a href="#"><img src="../accest/image/icon-nb2.jpg" alt=""></a>
-                        <p>1 Video</p>
-                    </div>
-                    <div class="item-noibat image-item-noibat">
-                        <a href="#"><img id="product-item-1" src="../accest/image/icon-nb-ip13iP13XanhLa.jpg" style="width: 100%;" alt=""></a>
-                        <p id="hinh-1">Xanh lá</p>
-                    </div>
-                    <div class="item-noibat image-item-noibat">
-                        <a href="#"><img id="product-item-2" src="../accest/image/icon-nb-ip13iP13Hong.jpg" style="width: 100%;" alt=""></a>
-                        <p id="hinh-2">Hồng</p>
-                    </div>
-                    <div class="item-noibat image-item-noibat">
-                        <a href="#"><img id="product-item-3" src="../accest/image/icon-nb-ip13iP13Den.jpg" style="width: 100%;" alt=""></a>
-                        <p id="hinh-3">Đen</p>
-                    </div>
-                    <div class="item-noibat image-item-noibat">
-                        <a href="#"><img id="product-item-4" src="../accest/image/icon-nb-ip13iP13Trang.jpg" style="width: 100%;" alt=""></a>
-                        <p id="hinh-4">Trắng</p>
-                    </div>
-                    <div class="item-noibat">
-                        <a href="#"><img src="../accest/image/icon-nb3.jpg" alt=""></a>
-                        <p>Hình mở hộp</p>
-                    </div>
-                    <div class="item-noibat">
-                        <a href="#"><img src="../accest/image/icon-nb4.jpg" alt=""></a>
-                        <p>Chụp từ camera</p>
-                    </div>
-                    <div class="item-noibat">
-                        <a href="#"><img src="../accest/image/icon-nb5.jpg" alt=""></a>
-                        <p>Hình 360 độ</p>
-                    </div>
+            </div> -->
+            <div class="row products row-cols-5 g-2">
+                <div class="col item-product">
+                    <a href="../ChiTietSp/ChiTIetSp.html?id=iphone13" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-1.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-ios loai-dien-thoai">iPhone 13 128GB | Chính hãng VN/A</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">28%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">13.590.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">18.990.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
                 </div>
-                <!-- <div class="baohanh">
-                    <div class="row">
-                        <div class="col-6 item-baohanh">
-                            <img src="../accest/image/item-bh1.jpg" width="50" height="40" alt="">
-                            <p>Hư gì đổi nấy <b>12 tháng</b> tại 3158 siêu thị toàn quốc (miễn phí tháng đầu) <a href="#">Xem chi tiết</a> </p>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-2.jpg" alt="" style="width: 100%;">
                         </div>
-                        <div class="col-6 item-baohanh">
-                            <img src="../accest/image/item-bh2.jpg" width="50" height="40" alt="">
-                            <p>Bảo hành chính hãng điện thoại 1 năm tại các trung tâm bảo hành hãng <a href="#">Xem địa chỉ bảo hành</a></p>
+                        <div class="card-body">
+                            <div class="card-title loai-ios loai-dien-thoai">iPhone 15 Pro Max 256GB | Chính hãng VN/A</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">16%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">29.290.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">34.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
                         </div>
-                        <div class="col-6 item-baohanh">
-                            <img src="../accest/image/item-bh3.jpg" width="50" height="40" alt="">
-                            <p>Bộ sản phẩm gồm: Hộp, Sách hướng dẫn, Cây lấy sim, Cáp Lightning - Type C <a href="#">Xem hình</a></p>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="sp-cu">
-                    <div class="row">
-                        <div class="col-2">
-                            <img src="../accest/image/SP-cu.jpg" width="100%" alt="">
-                        </div>
-                        <div class="col-10">
-                            <h5>Xem sản phẩm cũ</h5>
-                            <a href="#">Điên thoại iPhone 13 128GB</a>
-                            <p>Giá từ <b style="color: red;">11.760.000₫</b> <i style="color: orangered;">Tiết kiệm 33%</i> Bảo hành 9 tháng chính hãng</p>
-                        </div>
-                    </div>
+                    </a>
                 </div>
-                <nav>
-                    <img src="../accest/image/CautrucIP13.jpg" width="100%" style="margin-top: 10px;margin-bottom: 40px;" alt="">
-                </nav>
-                <div>
-                    <h5>Thông tin sản phẩm</h5>
-                    <h5 style="margin-top: 20px;margin-bottom: 20px;text-align: justify;">
-                        Trong khi sức hút đến từ bộ 4 phiên bản iPhone 12 vẫn chưa nguội đi, thì hãng điện thoại Apple 
-                        đã mang đến cho người dùng một siêu phẩm mới <a href="#">iPhone 13</a> series với nhiều cải tiến thú vị sẽ mang 
-                        lại những trải nghiệm hấp dẫn nhất cho người dùng.
-                    </h5>
-                    <h5>Hiệu năng vượt trội nhờ chip Apple A15 Bionic</h5>
-                    <p>
-                        Con chip <a href="#">Apple A15 Bionic</a> siêu mạnh được sản xuất trên quy trình 5 nm giúp <a href="#">iPhone 13</a> đạt hiệu năng ấn tượng, 
-                        với CPU nhanh hơn 50%, GPU nhanh hơn 30% so với các đối thủ trong cùng phân khúc.
-                    </p>
-                </div> -->
-               <div class="Danhgia">
-                    <div>
-                        <h4 id="danh-gia">Đánh giá Điện thoại iPhone 13 128GB</h4>
-                        <div class="star">
-                            <h4 style="margin-right: 10px;color: orangered;">4.4</h4>
-                            <div class="list-star">
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-3.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-ios loai-dien-thoai">iPhone 15 128GB | Chính hãng VN/A</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">10%</span>
                             </div>
-                            <a id="so-luong-danh-gia" href="#">520 đánh giá</a>
-                        </div>
-                        <div class="rate-list">
-                            <ul style="list-style: none;">
-                                <li>5 <i class="st fa-solid fa-star"></i><div class="rate-line"><p style="width: 200px;" class="rate-line1"></p></div>60%</li>
-                                <li>4 <i class="st fa-solid fa-star"></i><div class="rate-line"><p style="width: 140px;" class="rate-line1"></p></div>20%</li>
-                                <li>3 <i class="st fa-solid fa-star"></i><div class="rate-line"><p style="width: 50px;" class="rate-line1"></p></div>10%</li>
-                                <li>2 <i class="st fa-solid fa-star"></i><div class="rate-line"><p style="width: 5px;" class="rate-line1"></p></div>3%</li>
-                                <li>1 <i class="st fa-solid fa-star"></i><div class="rate-line"><p style="width: 5px;" class="rate-line1"></p></div>3%</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="img-danhgia">
-                        <img id="anh-danh-gia-1" src="../accest/image/danhgia1.jpg" alt="">
-                        <img id="anh-danh-gia-2" src="../accest/image/danhgia2.jpg" alt="">
-                        <img id="anh-danh-gia-3" src="../accest/image/danhgia3.jpg" alt="">
-                        <img id="anh-danh-gia-4" src="../accest/image/danhgia4.jpg" alt="">
-                        <img id="anh-danh-gia-5" src="../accest/image/danhgia5.jpg" alt="">
-                    </div>
-                    <div class="rt-list">
-                        <div style="display: flex;">
-                            <p id="ten-nguoi-danh-gia-1" style="font-size: 18px;font-weight: bold;"> Hùng</p>
-                            <div class="damua">
-                                <i class="check fa-solid fa-check"></i>
-                                <span style="color: green;">Đã mua tại TanTien Store</span>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">18.990.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    22.990.000đ</p>
                             </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
                         </div>
-                        <div style="display: flex;">
-                            <div style="font-size: 13px;">
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                            </div>
-                            <span style="margin-left: 10px;">Sẽ giới thiệu cho bạn bè người thân</span>
-                            <i style="color: red;margin-top: 5px;margin-left: 5px;" class="fa-solid fa-heart"></i>
-                        </div>
-                        <p id="noidung-danhgia-1">Rất oke</p>
-                    </div>
-                    <div class="rt-list">
-                        <div style="display: flex;">
-                            <p id="ten-nguoi-danh-gia-2" style="font-size: 18px;font-weight: bold;"> Hùng</p>
-                            <div class="damua">
-                                <i class="check fa-solid fa-check"></i>
-                                <span style="color: green;">Đã mua tại TanTien Store</span>
-                            </div>
-                        </div>
-                        <div style="display: flex;">
-                            <div style="font-size: 13px;">
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                                <i class="rt-star fa-solid fa-star"></i>
-                            </div>
-                            <span style="margin-left: 10px;">Sẽ giới thiệu cho bạn bè người thân</span>
-                            <i style="color: red;margin-top: 5px;margin-left: 5px;" class="fa-solid fa-heart"></i>
-                        </div>
-                        <p id="noidung-danhgia-2">Hàng chất lượng </p>
-                    </div>
-                    <div class="button-click">
-                        <div class="row">
-                            <div class="col-6"><button class="btn btn-outline-dark">Xem tất cả đánh giá</button></div>
-                            <div class="col-6"><button class="btn btn-primary">Viết đánh giá</button></div>
-                        </div>
-                    </div>
-               </div>
-            </div>
-            <div class="col-5 mt-3">
-                <!-- <div class="duongluong">
-                    <a href="#" class="box-item">128GB</a>
-                    <a href="#" class="box-item">256GB</a>
+                    </a>
                 </div>
-                <div class="color-item">
-                    <a href="#" class="box-item">Xanh lá</a>
-                    <a href="#" class="box-item">Hồng</a>
-                    <a href="#" class="box-item">Đen</a>
-                    <a href="#" class="box-item">Trắng</a>
-                    <a href="#" class="box-item">Xanh Dương</a>
-                </div> -->
-                <p>Giá tại <a href="#">Hồ Chí Minh <i class="fa-solid fa-caret-down"></i></a></p>
-                
-                <div class="box-sale">
-                    <div class="box-time-sale">
-                        <div class="box-sale-left">
-                            <span style="font-size: 18px;">Online Giá Rẻ Quá</span><br>
-                            <span><b id="product-price" style="font-size: 25px;">13.690.000</b><sup>đ</sup></span>
-                            <p><strike id="product-price-sale-off">17.790.000</strike><i>(-23%)</i></p>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-4.jpg" alt="" style="width: 100%;">
                         </div>
-                        <div class="box-sale-right">
-                            <span>Kết thúc vào</span><br>
-                            <span>23:00 | 31/05</span>
-                            <p>Tại <b>Hồ Chí Minh</b></p>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Samsung Galaxy S23 Ultra 256GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">7%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">21.990.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    31.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="d-flex justify-content-evenly align-items-center">
-                    <div class="chon-so-luong">
-                        <button class="btn-chon-sl decrease"><i class="fa-solid fa-minus"></i></button>
-                        <input id="value" type="text" value="1">
-                        <button class="btn-chon-sl increase" ><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                    <button id="button-cart" class="btn btn-primary btn-lg d-flex justify-content-center my-3">THÊM VÀO GIỎ HÀNG</button>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-5.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Samsung Galaxy S24 Ultra 12GB 256GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">7%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">26.490.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    33.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-6.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Xiaomi Redmi Note 13 Pro Plus 5G 8GB 256GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">11%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">9.990.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">10.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="s" class="card text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-7.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-ios loai-dien-thoai">iPhone 15 Plus 128GB | Chính hãng VN/A</div>
+                                <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">16%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">22.150.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    25.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-8.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-ios loai-dien-thoai">iPhone 15 Pro 128GB | Chính hãng VN/A</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">7%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">24.590.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">28.990.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-9.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại OPPO Reno11 F 5G Tím</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">5%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">8.990.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">5.490.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-10.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Xiaomi Redmi Note 13 6GB 128GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">17%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">4.690.000đ</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    4.890.000đ</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
 
-                <div id="cau-hinh" class="cauhinh mt-3">
-                    <h5 id="">Cấu hình điện thoại iPhone13 128GB</h5>
-                    <table class="table">
-                        <tr class="table-secondary">
-                            <td>Màn hình:</td>
-                            <td>OLED, 6.1", Super Retina XDR</td>
-                        </tr>
-                        <tr>
-                            <td>Hệ điều hành:</td>
-                            <td>IOS 15</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Camera sau:</td>
-                            <td>2 camera 12 MP</td>
-                        </tr>
-                        <tr>
-                            <td>Camera trưỚC</td>
-                            <td>12 MP</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Chip:</td>
-                            <td>Apple A15 Bionic</td>
-                        </tr>
-                        <tr>
-                            <td>RAM:</td>
-                            <td>4 GB</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Dung lượng lưu trữ:</td>
-                            <td>128 GB</td>
-                        </tr>
-                        <tr>
-                            <td>SIM:</td>
-                            <td>1 Nano SIM & 1 eSIM, Hỗ trợ 5G</td>
-                        </tr>
-                        <tr class="table-secondary">
-                            <td>Pin, Sạc:</td>
-                            <td>3240 mAh, 20 W</td>
-                        </tr>
-                        <tr>
-                            <td>Hãng</td>
-                            <td>iPhone (Apple). <a href="#">Xem thông tin hãng</a></td>
-                        </tr>
-                    </table>
-                    <center>
-                        <a href="">
-                            <button style="width: 70%;"class="btn btn-outline-primary p-2">Xem thêm cấu hình chi tiết <i style="font-size: 12px;" class="fa-solid fa-play"></i></button>
-                        </a>
-                    </center>
+
+                <!-- 11 - 20 -->
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-11.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại Xiaomi Redmi Note 13 (8GB/128GB)</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">30%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">4.990.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">5.290.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-12.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại vivo Y100 256GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">24%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">7.690.000₫ </p>
+                                <p style="font-size: 14px; margin-left: 10px;">Trả góp 0%</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-13.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Samsung Galaxy A55 5G</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">11%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">11.490.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    11.990.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-14.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại realme C65 (8GB/256GB)</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">24%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">4.790.000₫ </p>
+                                <p style="font-size: 14px; margin-left: 10px;">
+                                    Trả góp 0%</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-15.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại Xiaomi Redmi Note 13 Pro 128GB </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">10%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">6.290.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">
+                                    7.290.000₫ </p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-16.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại Nokia 8210 4G</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">9%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">1.590.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;">Quà tặng 200K</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="s" class="card text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-17.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-phothong loai-dien-thoai">Điện thoại Nokia 215 4G</div>
+                                <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">13%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">990.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;">
+                                    Khuyến mãi 200K</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-18.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-phothong loai-dien-thoai">Điện thoại Nokia 110 4G Pro</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">29%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">720.000₫
+                                </p>
+                                <p style="font-size: 14px; margin-left: 10px;">Khuyến mãi 200K</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-19.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-phothong loai-dien-thoai">Điện thoại iPhone 12 64GB</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">8%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">11.590.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px; text-decoration: line-through;">13.090.000₫ </p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>    
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dienthoai-20.jpg" alt="" style="width: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-android loai-dien-thoai">Điện thoại vivo Y17s (6GB/128GB) </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">0%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">3.990.000₫ </p>
+                                <p style="font-size: 14px; margin-left: 10px;">
+                                    Trả góp 0%</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+
+
+                <!-- Các sản phẩm khác điện thoại -->
+                <div class="col item-product">
+                    <a href="../ChiTietSp/ChiTIetSp.html?id=dongho-kidcareS884G " class="card text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-dongho-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-dong-ho">Đồng hồ định vị trẻ em Kidcare S88 4G 43.4mm </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">0%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">3.990.000₫ </p>
+                                <p style="font-size: 14px; margin-left: 10px;">
+                                    Trả góp 0%</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-dongho-2.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-dong-ho">Đồng hồ định vị trẻ em Kidcare S6 4G 41.5mm Hồng </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">10%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">1.790.000₫ </p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    Trả góp 0%</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-laptop-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-laptop">Laptop Lenovo LOQ Gaming 15IAX9 i5 12450HX/16GB/512GB/6GB RTX3050/144Hz/Win11 (83GS000JVN)</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">6%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">21.490.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    22.990.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-laptop-2.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-laptop">Laptop Lenovo Ideapad Gaming 3 15ACH6 R5 5500H/16GB/512GB/4GB RTX2050/144Hz/Win11 (82K2027PVN) </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">17%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">15.690.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    18.990.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-laptop-3.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-laptop">Laptop Lenovo Ideapad 1 15ALC7 R7 5700U/16GB/512GB/Win11 (82R400C1VN)</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">12%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">12.090.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    13.990.000₫ </p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-laptop-3.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-laptop">Laptop Lenovo Ideapad 1 15ALC7 R7 5700U/16GB/512GB/Win11 (82R400C1VN)</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">12%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">12.090.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    13.990.000₫ </p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="../ChiTietSp/ChiTIetSp.html?id=camera" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-camera-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-laptop">Camera IP 360 Độ 2MP IMOU Ranger 2C A22EP-L</div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">34%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">450.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    690.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-chuot-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-chuot">Chuột Không dây Silent Rapoo M320 </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">20%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">200.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    250.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-sacduphong-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-sac">Pin sạc dự phòng Polymer 20000mAh Type C PD 22.5W Baseus Comet PPMD20 kèm cáp Lightning và Type C </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">42%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">745.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    1.300.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col item-product">
+                    <a href="" class="card h-100 text-decoration-none">
+                        <div class="card-img" style="margin: auto; padding: 20px; padding-bottom: 0; width: 100%; height: 220px;">
+                            <img src="../accest/image/dm-loa-1.jpg" alt="" style="width: 100%; height: 100%;">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-title loai-loa">Loa Bluetooth JBL Partybox 110 </div>
+                            <div class="deal-apple px-2">
+                                <i class="fa-solid fa-bolt"style="font-size: 18px; margin-right: 4px;"></i>
+                                <span style="margin-right: 4px;">GIẢM</span>
+                                <span class="price-sale-off" style="font-weight: bold;">33%</span>
+                            </div>
+                            <div class="card-info-price">
+                                <p class="price-product" style="font-size: 16px; color: red;">8.590.000₫</p>
+                                <p style="font-size: 14px; margin-left: 10px;   ">
+                                    12.900.000₫</p>
+                            </div>
+                            <div class="danh-gia-sao">
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style="color: orange;"></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                                <i class="fa-solid fa-star" style=""></i>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="sp-muacung mt-5">
-                <h4>Sản phẩm thường mua cùng</h4>
-                <div class="list-sp">
-                    <div class="item-sp">
-                        <center><img src="../accest/image/item-sp1.jpg"alt=""></center>
-                        <span class="sale"><b style="color: yellow;">%</b> Giá rẻ quá</span>
-                        <p style="margin-bottom: -1px;">Tai nghe Bluetooth True Wireless AVA+ DS206</p>
-                        <div>
-                            <strike>790.000 </strike><sup>đ</sup>
-                            <span>-70%</span>
-                        </div>
-                        <p class="Gia">235.000 <sup>đ</sup></p>
-                        <div class="rt-star-sp">
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <span>195</span>    
-                        </div>
-                    </div>
-                    <div class="item-sp">
-                        <center><img src="../accest/image/item-sp2.jpg"alt=""></center>
-                        <span class="sale"><b style="color: yellow;">%</b> Giá rẻ quá</span>
-                        <p style="margin-bottom: -1px;">Sạc dự phòng Baseus 20W PPCXZ10</p>
-                        <div>
-                            <strike>1.390.000</strike><sup>đ</sup>
-                            <span>-52%</span>
-                        </div>
-                        <p class="Gia">655.000 <sup>đ</sup></p>
-                        <div class="rt-star-sp">
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <span>10</span>
-                        </div>
-                    </div>
-                    <div class="item-sp">
-                        <center><img src="../accest/image/item-sp3.jpg"alt=""></center>
-                        <span class="sale"><b style="color: yellow;">%</b> Giá rẻ quá</span>
-                        <p style="margin-bottom: -1px;">Đồng hồ thông minh Apple Watch SE 2022 GPS + Cellular 44mm viền nhôm dây thể thao</p>
-                        <div>
-                            <strike>9.990.000 </strike><sup>đ</sup>
-                            <span>-20%</span>
-                        </div>
-                        <p class="Gia">7.990.000 <sup>đ</sup></p>
-                        <div class="rt-star-sp">
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <span>23</span>
-                        </div>
-                    </div>
-                    <div class="item-sp">
-                        <center><img src="../accest/image/item-sp4.jpg"alt=""></center>
-                        <span class="sale"><b style="color: yellow;">%</b> Giá rẻ quá</span>
-                        <p style="margin-bottom: -1px;">Cáp Type C 2m Xmobile FD-L01</p>
-                        <div>
-                            <strike>190.000 </strike><sup>đ</sup>
-                            <span>-50%</span>
-                        </div>
-                        <p class="Gia">95.000 <sup>đ</sup></p>
-                        <div class="rt-star-sp">
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class=" fa-solid fa-star"></i>
-                            <span>171</span>
-                        </div>
-                    </div>
-                    <div class="item-sp">
-                        <center><img src="../accest/image/item-sp5.jpg"alt=""></center>
-                        <span class="sale"><b style="color: yellow;">%</b> Giá rẻ quá</span>
-                        <p style="margin-bottom: -1px;">Sạc 2 cổng Baseus Cube CCXFK20UE</p>
-                        <div>
-                            <strike>320.000 </strike><sup>đ</sup>
-                            <span>-43%</span>
-                        </div>
-                        <p class="Gia">180.000 <sup>đ</sup></p>
-                        <div class="rt-star-sp">
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class="star-sp fa-solid fa-star"></i>
-                            <i class=" fa-solid fa-star"></i>
-                            <i class=" fa-solid fa-star"></i>
-                            <span>18</span>
-                        </div>
-                    </div>
-                </div>
-           </div>
         </div>
     </div>
 
@@ -1253,7 +1815,7 @@
                </ul>
             </div>
             <div class="footer-logo">
-                <a href="#">
+                <a href="../index.html">
                     <img src="../accest/image/logoTanTien1.png" alt="">
 
                 </a>
@@ -1512,6 +2074,7 @@
         </div>
 
     </div>
-    <script src="jsChiTiet.js"></script>
+
+    <script src="jsDanhMuc.js"></script>
 </body>
 </html>

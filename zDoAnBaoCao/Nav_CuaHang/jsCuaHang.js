@@ -63,3 +63,22 @@ loginLink.addEventListener('click', function() {
         formBox2.style.display = 'none'
     }
 })
+
+// Liên kết đến trang lọc nd đã chọn DanhMuc -> iPhone -> Sp Iphone
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const phoneLinks = document.querySelectorAll('.dt-dm');
+
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const brandName = this.textContent.trim(); 
+            filterByBrand(brandName); 
+        });
+    });
+
+    function filterByBrand(brandName) {
+        
+        window.location.href = `../DanhMuc/danhMuc.html?brand=${(brandName)}`;
+    }
+});

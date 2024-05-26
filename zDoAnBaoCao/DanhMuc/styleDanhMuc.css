@@ -12,65 +12,12 @@ body {
 
 }
 
-
-#product-container {
-    width:  100%;
-    height: 400px;
-    overflow: hidden;
-    border: 5px solid #CCC;
+.grid-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content;
+    
 }
-
-.image-container {
-    height: 400px;
-    padding: 20px;
-}
-
-#product-iframe {
-    width: 100%;
-    height: 400px;
-}
-
-.product-image {
-    width: 100%;
-    height: 400px;
-}
-
-#product-image {
-    width: 100%;
-    height: 400px;
-    transform: scale(var(--zoom, 1));
-    transform-origin: var(--x) var(--y);
-    transition: transform 0.3s ease;
-}
-
-#product-container:hover {
-    --zoom: 2;
-}
-
-.chon-so-luong {
-    display: flex;
-    align-items: center;
-}
-
-.chon-so-luong button {
-    width: 32px;
-    height: 32px;
-    outline: none;
-    border: 2px solid #333;
-}
-
-.chon-so-luong input {
-    height: 32px;
-    width: 64px;
-    text-align: center;
-    font-size: 18px;
-    outline: none;
-    border: 2px solid #333;
-    font-weight: 600;
-    margin: 0 6px;
-}
-
-
 
 /* Reset CSS */
 * {
@@ -462,198 +409,135 @@ body {
 }
 
 
-
-/* Chi tiết sản phẩm */
-a {
-    text-decoration: none;
-}
-.noibat {
-    display: flex;
-}
-.item-noibat img {
-    border: 1px solid gainsboro;
-    width: 70px;
-    height: 70px;
-    padding: 8px;
-}
-.item-noibat {
-    margin-right: 10px;
-    text-align: center;
-    width: 100%;
-    margin-top: 15px;
+/* Cửa hàng */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    border: 1px solid #ddd;
 }
 
-.baohanh{
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-    width: 100%;
-    padding: 10px 20px;
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Thay đổi box-shadow khi hover */
 }
-.item-baohanh{
-    display: flex;
-    margin-top: 18px;
-}
-.sp-cu{
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-    width: 100%;
-    padding: 15px 15px;
-    margin-top: 20px;
-}
-.Danhgia{
-    border: 1px solid gainsboro;
-    border-radius: 10px;
-    padding: 20px 20px;
-}
-.star{
-    display: flex;
+
+.heading-tag {
     margin-top: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.list-star{
-    margin-top: 2px;
+
+.heading-tag a {
+    text-decoration: none;
+    background-color: #f3f4f6;
+    padding: 5px 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
     margin-right: 10px;
 }
-.rate-line{
-    width: 250px;
-    height: 6px;
-    border-radius: 20px;
-    background-color: #eee;
-    position: relative;
-    margin-right: 10px;
-    margin-left: 10px;
+
+.heading-tag a:last-child {
+    margin: 0;
 }
-.rate-list li{
+
+.card-title {
+    height: 80px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 18px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.card-info-price {
     display: flex;
     align-items: center;
-    margin-left: -30px;
+    font-weight: 500;
 }
-.rate-line1{
-    height: 6px;
-    border-radius: 20px;
-    background-color: orangered;
+
+
+.grid-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 0;
+    grid-gap: 10px;
+}
+
+
+/* Danh mục */
+.loc {
+    display: flex;
+}
+
+.loc-item {
+    position: relative;
+    margin: 0 10px 10px 0;
+}
+
+.loc-title:hover {
+    cursor: pointer;
+}
+
+.loc-item span {
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+.loc-item-menu {
     position: absolute;
-}
-.img-danhgia{
-    width: 100%;
-    margin-top: 50px;
-    display: flex;
-    justify-content: space-between;
-}
-.img-danhgia img{
-    width: calc(90%/5);
-    height: 140px;
-    border-radius: 10px;
-}
-.rt-list{
-    border-bottom: 1px solid gainsboro;
-    padding-top: 15px;
-}
-.rt-star{
-    color: orangered;
-}
-.button-click{
-    margin-top: 30px;
-}
-.button-click button{
-    width: 100%;
-    padding: 12px 0px;
-}
-.list-sp{
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-}
-.item-sp{
-    width: 250px;
-    height: 400px;
-    border: 1px solid gainsboro;
-    padding: 10px 10px;
-}
-.item-sp img{
-    width: 180px;
-    margin-top: 20px;
-}
-.sale{
-    background-image: linear-gradient(to right, rgb(247, 164, 88), rgb(247, 109, 68));
-    border-radius: 20px;
-    padding: 2px 10px;
-    color: white;
-}
-.Gia{
-    font-weight: bold;
-    color: orange;
-    font-size: 20px;
-    margin-bottom: -2px;
-}
-.rt-star-sp{
-    font-size: 13px;
-}
-.star-sp{
-    color: orangered;
-}
-.box-item{
-    border: 1px solid gainsboro;
-    display: inline-block;
-    height: 36px;
-    font-size: 18px;
-    padding: 0 15px;
-    line-height: 36px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #333;
-}
-.box-item:hover{
-    border: 1px solid blue;
-    color: blue;
-}
-.box-time-sale{
-    color: white;
-    display: flex;
-    padding: 10px;
-}
-.box-sale-left{
-    width: 50%;
-}
-.box-sale-right{
-    text-align: right;
-    width: 50%; 
-}
-.box-sale{
-    background: linear-gradient(272.75deg, #f38c25 38.99%, #fb6848 76.29%);
-    padding: 5px;
-    border-radius: 10px;
-}
-.box-sale-content{
+    top: 44px;
     background-color: white;
-    padding: 10px;
+    border: 2px solid #ccc;
     border-radius: 10px;
-}
-.box-VIP{
-    border-top: 1px dotted orangered;
-    border-bottom: 1px dotted orangered;
-    padding: 12px 0px;
-}
-.style-so{
-    background-color: #4a90e2;
-    border-radius: 100%;
-    color: white;
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    line-height: 16px;
+    padding: 10px;
+    display: none;
     text-align: center;
+    z-index: 1;
 }
-.check{
-    border: 1px solid green;
-    border-radius: 100%;
-    color: green;
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    line-height: 20px;
-    text-align: center;
-    margin-left: 10px;
+
+.item-fill {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    padding: 10px;
 }
+
+.loc-item-menu.active {
+    display: grid;
+}
+
+.item-fill a,
+.item-fill button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.loc-item-menu button.active, .loc-item-menu .brand-filter.active {
+    border: 2px solid #007bff; /* Màu viền khi nút được chọn */
+    outline: none; /* Loại bỏ viền focus mặc định */
+}   
+
+
+
+
+
+
+
+
+
 
 
 
@@ -681,6 +565,7 @@ a {
     color: #fff;
     /* text-align: center; */
 }
+
 
 .khuyen-mai-item h5 {
     margin: 0;

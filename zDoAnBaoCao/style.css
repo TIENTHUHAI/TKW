@@ -30,6 +30,10 @@
 }
 
 
+.error {
+    color: red;
+}
+
 
 body {
 
@@ -150,15 +154,18 @@ body {
 
 .head-right {
     display: flex;
+    align-items: center;
 }
 
 .head-right-item {
-    
+    padding-left: 10px;
+    margin-left: 10px;
 }
 
 .head-right-item > a {
-    padding: 0 10px;
-    margin: 0 10px;
+    padding-left: 10px;
+    margin: 0;
+    margin-left: 10px;
 }
 
 .head-right i {
@@ -184,6 +191,63 @@ body {
     padding-top: 2px;
 }
 
+
+.login-success {
+    position: relative;
+}
+
+.thongtin-nguoidung::before {
+    content: '';
+    display: block; /* Ensures the pseudo-element is visible */
+    width: 0; /* Necessary to create a triangle */
+    height: 0; /* Necessary to create a triangle */
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute; /* Positioning if needed */
+    top: -26px; /* Adjust the position as necessary */
+    left: 60px; /* Adjust the position as necessary */
+}
+
+
+.thongtin-nguoidung {
+    position: absolute;
+    display: none;
+    width: 150px;
+    background-color: white;
+    list-style: none;
+    padding: 0;
+    top: 120%;
+    right: 100%;
+    transform: translateX(58%);
+    text-align: center;
+}
+
+.login-success:hover .thongtin-nguoidung {
+    display: block;
+}
+
+.thongtin-nguoidung-ten {
+    padding: 6px 8px;
+    margin: 0;
+    color: #333;
+    font-weight: 500;
+}
+
+.thongtin-nguoidung li {
+    padding: 4px 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.thongtin-nguoidung li:hover {
+    background-color: #ccc;
+}
+
+.thongtin-nguoidung li a {
+    color: #333;
+    text-decoration: none;
+}
 
 /* Form Login Register */
 #wrapper {
@@ -500,6 +564,7 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    border: none;
 }
 .next-uudai-kh {
     position: absolute;
@@ -514,6 +579,7 @@ body {
     right: -20px;
     top: 50%;
     transform: translateY(-50%);
+    border: none;
     z-index: 1;
 }
 
@@ -677,6 +743,7 @@ a:hover .card-title {
     align-items: center;
     border-radius: 50%;
     left: -20px;
+    opacity: 1;
     top: 50%;
     z-index: 1;
 }
@@ -693,6 +760,7 @@ a:hover .card-title {
     border-radius: 50%;
     right: -20px;
     top: 50%;
+    opacity: 1;
     z-index: 1;
 }
 

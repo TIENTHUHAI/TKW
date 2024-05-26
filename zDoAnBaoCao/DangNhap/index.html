@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta id="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com">
+
+
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="../accest/fontawesome-free-6.5.1-web/css/all.css">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="accest/bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reponsive.css">
+
+
+    <title>Document</title>
+
+    <style>
+        .mt-50 {
+            margin-top: 50px;
+        }
+
+        .ml-6 {
+            margin-left: 6px;
+        }
+
+        .text-red {
+            color: red;
+        }
+
+        /* CSS giỏ hàng Internal */
+        .gio-hang {
+            position: relative;
+        }
+
+        .gio-hang:hover .thongtin-giohang {
+            display: block;
+        }
+
+        .heading-giohang {
+            border-bottom: 2px solid #ccc;
+            margin: 0;
+        }
+
+        
+        
+        .thongtin-giohang {
+            display: none;
+            position: absolute;
+            width: 430px;
+            background-color: white;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+            padding: 8px 12px;
+            top: 40px;
+            right: 0;
+            opacity: 1;
+        }
+
+        .thongtin-giohang::before {
+            position: absolute;
+            top: -30px;
+            right: 14px;
+            content: "";
+            border: 16px solid white;
+            border-top: 16px solid transparent;
+            border-left: 16px solid transparent;
+            border-right: 16px solid transparent;
+        }
+
+        .sanpham-themvao {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0 6px 0;
+            margin: 0;
+            border-bottom: 2px solid #ccc;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sanpham-themvao span {
+            width: 100px;
+            font-size: 14px;
+            text-align: end;
+        }
+
+        .hinhanh-thongtin {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            margin-right: 4px;
+        }
+
+        .hinhanh-thongtin p {
+            font-size: 14px;
+            padding: 0 0 0 8px;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .chitiet-giohang {
+            margin-top: 8px;
+            text-align: end;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header">
+        <div class="container-md">
+            <div class="row">
+                <div class="head-main">
+                    <div class="head-logo">
+                        <a href="#">
+                            <img src="../accest/image/logoTanTien1.png" alt="">
+                        </a>
+                    </div>
+                        <form class="form-search" action="">
+                            <div class="head-search">
+                                <input class="head-search-input" id="txt-Search" id="txt-Search" type="text" placeholder="Bạn cần tìm kiếm gì?">
+                                <button type="submit" class="head-search-btn">
+                                    <span>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </span>
+                                    <span>Tìm kiếm</span>
+                                </button>
+                                <div class="lichsu-timkiem" tabindex="0">
+                                    <div class="title text-secondary">
+                                        Lịch sử tìm kiếm
+                                    </div>
+                                    <div class="save-search">
+                                        <div class="save-search-text">
+                                            Iphone 15 Pro
+                                        </div>
+                                        <i class="p-1 fa-solid fa-xmark"></i>
+                                    </div>
+                                    <div class="save-search">
+                                        <div class="save-search-text">
+                                            Xiaomi 13 Pro
+                                        </div>
+                                        <i class="p-1 fa-solid fa-xmark"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    
+                    
+                    
+
+                    <div class="head-right">
+                        <div class="head-right-item gio-hang ">
+                            <a href="#">
+                                <i class="cart fa-solid fa-cart-shopping">
+                                    <span>0</span>
+                                </i>
+                            </a>
+                            <div class="thongtin-giohang">
+                                <div class="heading-giohang">
+                                    <h5>Sản phẩm mới thêm vào giỏ</h5>     
+                                </div>
+                                <a href="" class="sanpham-themvao">
+                                    <div class="hinhanh-thongtin">
+                                        <div class="hinhanh-sp" style="height: 60px; width: 70px;">
+                                            <img src="../accest/image/iphone13.jpg" alt="" style="width: 70px; height: 60px; border: 1px solid #ccc; padding: 0 2px;">
+                                        </div>
+                                        <p>iPhone 13 128GB</p>
+                                    </div>
+                                    <span class="text-red">13.890.000₫</span>
+                                </a>
+                                <a href="" class="sanpham-themvao">
+                                    <div class="hinhanh-thongtin">
+                                        <div class="hinhanh-sp" style="height: 60px; width: 70px;">
+                                            <img src="../accest/image/lenovo.jpg" alt="" style="width: 70px; height: 60px; border: 1px solid #ccc; padding: 0 2px;">
+                                        </div>
+                                        <p>Laptop Lenovo Ideapad 3 15IAU7 i3 1215U/8GB/256GB/Win11</p>
+                                    </div>
+                                    <span class="text-red">8.590.000₫</span>
+                                </a>
+                                <a href="" class="sanpham-themvao">
+                                    <div class="hinhanh-thongtin">
+                                        <div class="hinhanh-sp" style="height: 60px; width: 70px;">
+                                            <img src="../accest/image/dongho2.jpg" alt="" style="width: 70px; height: 60px; border: 1px solid #ccc; padding: 0 2px;">
+                                        </div>
+                                        <p>Đồng hồ thông minh BeFit WatchFit 46.7mm</p>
+                                    </div>
+                                    <span class="text-red">540.000₫</span>
+                                </a>
+                                <div class="chitiet-giohang">
+                                    <a href="" class="btn btn-sm btn-primary">Chi tiết giỏ hàng</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="head-right-item user-name d-flex align-items-center">
+                            <a href="#" class="user-login-register">
+                                <i class="fa-solid fa-user"></i>
+                            </a>
+                            <div class="login-success d-none">
+                                <img src="../accest/image/my-avatar.jpg" style="width: 32px; height: 32px; border-radius: 50%;" alt="">
+                                <ul class="thongtin-nguoidung">
+                                    <p class="thongtin-nguoidung-ten">Hà Minh Tiến</p>
+                                    <li>
+                                        <a href="">
+                                            Thông tin cá nhân
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Đơn mua
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Đăng xuất
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Form Login Register -->
+    <div id="wrapper">
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+        <div class="data">
+            <p>Name</p>
+            <p id="name" class="alert alert-success"></p>
+            <p>Profile Pic</p>
+            <img src="" alt="" id="image" class="rounded-circle" width="100" height="100">
+            <p>Email</p>
+            <p id="email"></p>
+            <button type="button" class="btn btn-danger" onclick="signOut();">Đăng Xuất</button>
+        </div>
+
+
+
+        <form id="form-box1" action="" class="form-box login">
+            <h2>Đăng nhập với</h2>
+            <div class="login-with d-flex justify-content-evenly">
+                <a onclick="sign" href="#" class="login-with-app d-flex align-items-center text-decoration-none text-secondary">
+                    <img src="../accest/image/login-logo-google.jpg" alt="" style="height: 30px; margin-right: 6px;">
+                    <span>Google</span>
+                </a>
+                <a href="#" class="login-with-app d-flex align-items-center text-decoration-none text-secondary">
+                    <img src="../accest/image/login-logo-zalo.jpg" alt="" style="height: 30px; margin-right: 6px;">
+                    <span>Zalo</span>
+                </a>
+            </div>
+            <div>
+                <div class="input-box">
+                    <input id="ten-dang-nhap" class="enter ten-dang-nhap" type="text" placeholder="Nhập số điện thoại/email">
+                    <small></small>
+                </div>
+                <div class="input-box">
+                    <input id="matkhau-dang-nhap" class="enter matkhau-dang-nhap" type="password" placeholder="Nhập mật khẩu">
+                    <small></small>
+                </div>
+                <div class="forgot text-end">
+                    <a href="#" class="text-decoration-none ">Quên mật khẩu</a>
+                </div>
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                </div>
+                <div class="login-register mt-3">
+                    <p>Bạn có tài khoản chưa?
+                        <a href="#" class="register-link fw-bold text-decoration-none">Đăng ký ngay</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+
+        <form id="form-box2" action="" class="form-box register">
+            <h2>Đăng ký với</h2>
+            <div class="login-with d-flex justify-content-evenly">
+                <a href="#" class="login-with-app d-flex align-items-center text-decoration-none text-secondary">
+                    <img src="../accest/image/login-logo-google.jpg" alt="" style="height: 30px; margin-right: 6px;">
+                    <span>Google</span>
+                </a>
+                <a href="#" class="login-with-app d-flex align-items-center text-decoration-none text-secondary">
+                    <img src="../accest/image/login-logo-zalo.jpg" alt="" style="height: 30px; margin-right: 6px;">
+                    <span>Zalo</span>
+                </a>
+            </div>
+            <div>
+                <div class="input-box">
+                    <input id="ten-dang-ky" class="enter" type="text" placeholder="Nhập họ và tên">
+                    <small></small>
+                </div>
+                <div class="input-box">
+                    <input id="sdt-dang-ky" class="enter" type="text" placeholder="Nhập số điện thoại">
+                    <small></small>
+                </div>
+                <div class="input-box">
+                    <input class="enter" type="email" placeholder="Nhập email (không bắt buộc)">
+                </div>
+                <div class="input-box">
+                    <input id="matkhau-dang-ky" class="enter" type="password" placeholder="Nhập mật khẩu">
+                    <small></small>
+                </div>
+                <div class="input-box">
+                    <input id="matkhau-dang-ky-2" class="enter" type="password" placeholder="Nhập lại mật khẩu">
+                    <small></small>
+                </div>
+                <div class="input-box">
+                    <input class="enter" type="text" placeholder="Nhập mã giới thiệu (nếu có)">
+                </div>
+                <div class="input-box">
+                    <input type="checkbox" id="confirm-1">
+                    <label for="confirm-1">Đăng ký nhận bản tin khuyến mãi từ TanTienStore</label>
+                </div>
+                <div class="input-box">
+                    <input type="checkbox" id="confirm-2" checked>
+                    <label for="confirm-2">Tôi đồng ý với các điều khoản bảo mật cá nhân</label>
+                </div>
+                <div class="d-grid mt-3">
+                    <button type="submit" class="btn btn-primary">Đăng ký</button>
+                </div>
+                <div class="login-register mt-3">
+                    <p>Bạn đã có tài khoản?
+                        <a href="#" class="login-link fw-bold text-decoration-none">Đăng nhập ngay</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Nav -->
+    <div id="navigation">
+        <div class="container-md">
+            <div class="nav">
+                <div class="nav-deals">
+                    <span>
+                        <i class="fa-solid fa-star"></i>
+                    </span>
+                    <a href="Nav_DealsToday/dealToDay.html">
+                        <span>Ưu đãi hôm nay</span>
+                    </a>
+                </div>
+
+                <ul class="d-md-flex d-none nav-list nav-list-cap1">
+                    <li class="nav-item fs-5">
+                        <a href="#">
+                            Trang chủ
+                        </a></li>
+                    <li class="nav-item fs-5">
+                        <a href="Nav_CuaHang/cuaHang.html">
+                            Tất cả sản phẩm
+                        </a></li>
+                    <li class="nav-item fs-5 nav-item-cap1">
+                        <a class="has-child" href="DanhMuc/danhMuc.html">
+                            Danh mục
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                        <ul class="nav-list-cap2">
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner loai-dien-thoai">
+                                        Điện thoại
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col-4">
+                                                    <h6>Thương hiệu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1 item-danhmuc-cap2">iPhone</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">OPPO</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">realme</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">ASUS</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Vivo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Nokia</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Tầm giá</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Dưới 2 triệu</a>
+                                                        <a class="row py-1">Từ 2 - 4 triệu</a>
+                                                        <a class="row py-1">Từ 4 - 7 triệu</a>
+                                                        <a class="row py-1">Từ 7 - 13 triệu</a>
+                                                        <a class="row py-1">Từ 13 - 20 triệu</a>
+                                                        <a class="row py-1">Trên 20 triệu</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Sản phẩm HOT</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">iPhone 15 Pro Max</a>
+                                                        <a class="row py-1">Samsung Galaxy A35</a>
+                                                        <a class="row py-1">Xiaomi 14</a>
+                                                        <a class="row py-1">OPPO Reno11 F 5G</a>
+                                                        <a class="row py-1">iPhone 14 Plus</a>
+                                                        <a class="row py-1">Samsung Galaxy S20 Ultra</a>
+                                                        <a class="row py-1">Nokia T21</a>
+                                                        <a class="row py-1">iPhone 15 Pro</a>
+                                                        <a class="row py-1">Xiaomi 13 Pro</a>
+                                                        <a class="row py-1">Vivo Y20</a>
+                                                        
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Laptop
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col-4">
+                                                    <h6>Thương hiệu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1 item-danhmuc-cap2">Mac</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">ASUS</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Lenovo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Dell</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Acer</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">HP</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">MSI</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">LG</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Gigabyte</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Huawei</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6 class="">Tầm giá</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Dưới 10 triệu</a>
+                                                        <a class="row py-1">Từ 10 - 15 triệu</a>
+                                                        <a class="row py-1">Từ 15 - 20 triệu</a>
+                                                        <a class="row py-1">Từ 20 - 25 triệu</a>
+                                                        <a class="row py-1">Từ 25 - 30 triệu</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Chọn theo nhu cầu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Văn phòng</a>
+                                                        <a class="row py-1">Gaming</a>
+                                                        <a class="row py-1">Mỏng nhẹ</a>
+                                                        <a class="row py-1">Đồ hoạ - kỹ thuật</a>
+                                                        <a class="row py-1">Sinh viên</a>
+                                                        <a class="row py-1">Cảm ứng</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Chọn theo dòng chip</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Laptop Core i3</a>
+                                                        <a class="row py-1">Laptop Core i5</a>
+                                                        <a class="row py-1">Laptop Core i7</a>
+                                                        <a class="row py-1">Laptop Core i9</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Chọn theo kích thước màn hình</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Laptop 12 inch</a>
+                                                        <a class="row py-1">Laptop 13 inch</a>
+                                                        <a class="row py-1">Laptop 14 inch</a>
+                                                        <a class="row py-1">Laptop 15.6 inch</a>
+                                                        <a class="row py-1">Laptop 16 inch</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Tablet
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col-4">
+                                                    <h6>Thương hiệu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1 item-danhmuc-cap2">iPad</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">OPPO</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Lenovo</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Masstel</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Mobell</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Honor</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Tầm giá</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Dưới 3 triệu</a>
+                                                        <a class="row py-1">Từ 3 - 8 triệu</a>
+                                                        <a class="row py-1">Từ 8 - 15 triệu</a>
+                                                        <a class="row py-1">Trên 15 triệu</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Sản phẩm HOT</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">iPad 9 Wifi</a>
+                                                        <a class="row py-1">OPPO Pad Neo Wifi</a>
+                                                        <a class="row py-1">Samsung Galaxy Tab A9+</a>
+                                                        <a class="row py-1">HONOR Pad X9</a>
+                                                        <a class="row py-1">iPad 10 Wifi</a>
+                                                        <a class="row py-1">Lenovo Tab M10</a>
+                                                        <a class="row py-1">Xiaomi Pad SE</a>
+                                                        <a class="row py-1">Lenovo Tab M9</a>
+                                                        
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Đồng hồ
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col-4">
+                                                    <h6 class="">Chọn theo thương hiệu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1 item-danhmuc-cap2">Apple Watch</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Samsung</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Xiaomi</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Huawei</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Coros</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Gamin</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Soundpeals</a>
+                                                        <a class="row py-1 item-danhmuc-cap2">Oppo</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Loại đồng hồ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Đồng hồ thông minh</a>
+                                                        <a class="row py-1">Đồng hồ trẻ em</a>
+                                                        <a class="row py-1">Dây đeo</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col-4">
+                                                    <h6>Sản phẩm nổi bật</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Apple Watch Series 9</a>
+                                                        <a class="row py-1">Apple Watch Ultra 2 2023</a>
+                                                        <a class="row py-1">Apple Watch SE</a>
+                                                        <a class="row py-1">Xiaomi Watch 2</a>
+                                                        <a class="row py-1">Gamin lily 2</a>
+                                                        <a class="row py-1">Huawei Watch GT4</a>
+                                                        <a class="row py-1">Samsung Galaxy Watch6</a>
+                                                        <a class="row py-1">Soundpeals Watch 4</a>
+                                                        <a class="row py-1">Huawei band 9</a>
+                                                        <a class="row py-1">Gamin vivoactive 5</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Loa, tai nghe
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col">
+                                                    <h6 class="">Chọn loại tai nghe</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Bluetooth</a>
+                                                        <a class="row py-1">Chụp tai</a>
+                                                        <a class="row py-1">Nhét tai</a>
+                                                        <a class="row py-1">Có dây</a>
+                                                        <a class="row py-1">Thể thao</a>
+                                                        <a class="row py-1">Gaming</a>
+                                                        <a class="row py-1">Xem tất cả tai nghe</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Hãng tai nghe</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Apple</a>
+                                                        <a class="row py-1">JBL</a>
+                                                        <a class="row py-1">Sony</a>
+                                                        <a class="row py-1">Soundpeals</a>
+                                                        <a class="row py-1">Xiaomi</a>
+                                                        <a class="row py-1">Samsung</a>
+                                                        <a class="row py-1">ASUS</a>
+                                                        <a class="row py-1">Marshall</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Chọn theo giá</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Dưới 200k</a>
+                                                        <a class="row py-1">Dưới 500k</a>
+                                                        <a class="row py-1">Dưới 1 triệu</a>
+                                                        <a class="row py-1">Dưới 2 triệu</a>
+                                                        <a class="row py-1">Dưới 5 triệu</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Chọn loại loa</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">JBL</a>
+                                                        <a class="row py-1">LG</a>
+                                                        <a class="row py-1">Sony</a>
+                                                        <a class="row py-1">Marshall</a>
+                                                        <a class="row py-1">Harman Kardon</a>
+                                                        <a class="row py-1">Samsung</a>
+                                                        <a class="row py-1">Bose</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Camera, Máy ảnh 
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col">
+                                                    <h6 class="">Loại</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Camera an ninh</a>
+                                                        <a class="row py-1">Camera hành trình</a>
+                                                        <a class="row py-1">Action Camera</a>
+                                                        <a class="row py-1">Gimbal</a>
+                                                        <a class="row py-1">Tripod</a>
+                                                        <a class="row py-1">Máy ảnh</a>
+                                                        <a class="row py-1">Flycam</a>
+                                                        <a class="row py-1">Xem tất cả camera</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Camera nổi bật</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Camera an ninh Imou</a>
+                                                        <a class="row py-1">Camera an ninh Ezviz</a>
+                                                        <a class="row py-1">Camera an ninh Xiaomi</a>
+                                                        <a class="row py-1">Camera an ninh TP-Link</a>
+                                                        <a class="row py-1">Camera Gopro</a>
+                                                        <a class="row py-1">Camera DJI</a>
+                                                        <a class="row py-1">Camera Insta360</a>
+                                                        <a class="row py-1">Máy ảnh Fujifilm</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Phụ kiện 
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col">
+                                                    <h6 class="">Phụ kiện di động</h6>
+                                                    <div class="container">
+                                                        <a class="row py-1">Phụ kiện Apple</a>
+                                                        <a class="row py-1">Dán màn hình</a>
+                                                        <a class="row py-1">Ốp lưng - bao da</a>
+                                                        <a class="row py-1">Thẻ nhớ</a>
+                                                        <a class="row py-1">Sim 4G</a>
+                                                        <a class="row py-1">Cáp, sạc</a>
+                                                        <a class="row py-1">Pin dự phòng</a>
+                                                        <a class="row py-1">Phụ kiện tiện ích</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Phụ kiện Laptop</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Chuột, bàn phím</a>
+                                                        <a class="row py-1">Balo Laptop | Túi chống sốc</a>
+                                                        <a class="row py-1">Webcam</a>
+                                                        <a class="row py-1">Giá đỡ</a>
+                                                        <a class="row py-1">Thảm, lót chuột</a>
+                                                        <a class="row py-1">Sạc laptop</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Thiết bị mạng</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Thiết bị phát sóng Wifi</a>
+                                                        <a class="row py-1">Bộ phát sóng di động</a>
+                                                        <a class="row py-1">Bộ kích sóng Wifi</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Thiết bị lưu trữu</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Thẻ nhớ</a>
+                                                        <a class="row py-1">USB</a>
+                                                        <a class="row py-1">Ổ cứng di động</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Hàng cũ 
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col">
+                                                    <h6 class="">Chọn loại sản phẩm cũ</h6>
+                                                    <div class="container">
+                                                        <a class="row py-1">Điện thoại cũ</a>
+                                                        <a class="row py-1">Máy tính bảng cũ</a>
+                                                        <a class="row py-1">Mac cũ</a>
+                                                        <a class="row py-1">Laptop cũ</a>
+                                                        <a class="row py-1">Tai nghe cũ</a>
+                                                        <a class="row py-1">Loa cũ</a>
+                                                        <a class="row py-1">Đồng hồ cũ</a>
+                                                        <a class="row py-1">Phụ kiện cũ</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>iPhone cũ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">iPhone 15 series cũ</a>
+                                                        <a class="row py-1">iPhone 14 series cũ</a>
+                                                        <a class="row py-1">iPhone 13 series cũ</a>
+                                                        <a class="row py-1">iPhone 12 series cũ</a>
+                                                        <a class="row py-1">iPhone 11 series cũ</a>
+                                                        <a class="row py-1">Xem tất cả iPhone cũ</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Android cũ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Samsung cũ</a>
+                                                        <a class="row py-1">Xiaomi cũ</a>
+                                                        <a class="row py-1">OPPO cũ</a>
+                                                        <a class="row py-1">Nokia cũ</a>
+                                                        <a class="row py-1">realme cũ</a>
+                                                        <a class="row py-1">ASUS cũ</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Laptop cũ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Laptop Dell cũ</a>
+                                                        <a class="row py-1">Laptop ASUS cũ</a>
+                                                        <a class="row py-1">Laptop Acer cũ</a>
+                                                        <a class="row py-1">Laptop HP cũ</a>
+                                                        <a class="row py-1">Laptop Lenovo cũ</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Sản phẩm nổi bật</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">iPhone 15 series cũ</a>
+                                                        <a class="row py-1">iPhone 14 series cũ</a>
+                                                        <a class="row py-1">iPhone 13 series cũ</a>
+                                                        <a class="row py-1">Apple Watch SE 44mm 4G cũ đẹp</a>
+                                                        <a class="row py-1">Samsung Galaxy Z Flip4 cũ đẹp</a>
+                                                        <a class="row py-1">Xiaomi 12T Pro cũ đẹp</a>
+                                                        <a class="row py-1">Xiaomi 12T cũ đẹp</a>
+                                                        <a class="row py-1">Oppo Find N2 đã kích hoạt</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Tivi cũ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Tivi cũ</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Sản phẩm Apple cũ</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Apple Watch cũ</a>
+                                                        <a class="row py-1">iPad cũ</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item-cap2">
+                                <a href="" class="danh-muc-item">
+                                    <span class="item-inner">
+                                        Khuyến mãi 
+                                    </span>
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </a>
+                                <ul class="nav-list-cap3">
+                                    <li class="nav-item-cap3">
+                                        <div class="container">
+                                            <ul class="row p-0" style="list-style: none;">
+                                                <li class="col">
+                                                    <h6 class="">Khuyến mãi</h6>
+                                                    <div class="container">
+                                                        <a class="row py-1">Hotsale cuối tuần</a>
+                                                        <a class="row py-1">Siêu sale phụ kiện</a>
+                                                        <a class="row py-1">Ưu đãi thanh toán</a>
+                                                        <a class="row py-1">Ưu đãi học sinh sinh viên</a>
+                                                        <a class="row py-1">Thu cũ 2G trợ giá lên đến 500k</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Thu cũ đổi mới giá hời</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">iPhone 15 trợ giá đến 4 triệu</a>
+                                                        <a class="row py-1">Galaxy Z Fold5 trợ giá 3 triệu</a>
+                                                        <a class="row py-1">Laptop trợ giá đến 3 triệu</a>
+                                                        <a class="row py-1">Đồng hồ trợ giá đến 1,5 triệu</a>
+                                                    </div>
+                                                </li>
+                                                <li class="col">
+                                                    <h6>Ưu đãi thành viên</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Smember giảm đến 5%</a>
+                                                        <a class="row py-1">Thu cũ Smem trợ giá đến 5%</a>
+                                                    </div>
+                                                    <h6 class="mt-3">Ưu đãi sinh viên</h6>
+                                                    <div class="container"  >
+                                                        <a class="row py-1">Laptop giảm thêm 5%</a>
+                                                        <a class="row py-1">Điện thoại giảm thêm 5%</a>
+                                                        <a class="row py-1">Đồng hồ giảm thêm 5%</a>
+                                                        <a class="row py-1">Loa - tai nghe giảm thêm 5%</a>
+                                                        <a class="row py-1">Hàng cũ giảm thêm 5%</a>
+                                                        <a class="row py-1">Ưu đãi học viên Edu Talk</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item fs-5">
+                        <a href="#">
+                            Giới thiệu
+                        </a></li>
+                    <li class="nav-item fs-5">
+                        <a href="TinCongNghe/TinCongNghe.html">
+                            Tin công nghệ
+                        </a></li>
+                </ul>
+
+                <div class="nav-support">
+                    <span>
+                        <i class="fa-solid fa-comment"></i>
+                    </span>
+                    <a href="Nav_Support/support.html">
+                        <span>Hỗ trợ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="accest/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script  cript src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <!-- Custom JS -->
+    <script src="main.js"></script>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="index.js">
+        
+    </script>
+</body>
+</html>

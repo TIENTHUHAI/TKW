@@ -18,6 +18,80 @@ function nextImage() {
 setInterval(nextImage, 3000);
 
 
+
+// Validate đăng nhập và đăng ký
+const form1 = document.getElementById('form-box1')
+const form2 = document.getElementById('form-box2')
+const tenDangNhap = document.getElementById('ten-dang-nhap')
+const mkDangNhap = document.getElementById('matkhau-dang-nhap')
+
+// Đăng ký
+const tenDangKy = document.getElementById('ten-dang-ky')
+const mkDangKy = document.getElementById('matkhau-dang-ky')
+const mkDangKy2 = document.getElementById('matkhau-dang-ky-2')
+const sdtDangKy = document.getElementById('sdt-dang-ky')
+
+
+
+function showError(input, message) {
+    let parent = input.parentElement;
+    let small = parent.querySelector('small')
+
+    small.classList.add('error')
+    small.innerText = message
+}
+
+function showSuccess(input) {
+    let parent = input.parentElement;
+    let small = parent.querySelector('small')
+
+    small.classList.remove('error')
+    small.innerText = ''
+}
+
+
+function checkEmptyError(listInput){
+    let isEmptyError = false;
+    listInput.forEach(input => {
+        input.value = input.value.trim()
+
+        if(!input.value) {
+            isEmptyError = true;
+            showError(input, 'Vui lòng nhập thông tin!')
+        }else {
+            showSuccess(input)
+        }
+    });
+
+    return isEmptyError
+}
+
+function checkEmailError(input) {
+    const regexEmail = /(([^<>()\[\]\\.,;:\s+@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))/mg;
+    input.value = input.value.trim();
+
+    let isEmailError = !regexEmail.test(input.value);
+    if (!isEmailError) {
+        showSuccess(input);
+    } else {
+        showError(input, 'Kiểm tra lại Email!');
+    }
+    return isEmailError;
+}
+
+form1.addEventListener('submit', function(e) {
+    e.preventDefault()
+
+    let isEmptyError = checkEmptyError([tenDangNhap, mkDangNhap]);
+})
+
+form2.addEventListener('submit', function(e) {
+    e.preventDefault()
+
+    let isEmptyError2 = checkEmptyError([tenDangKy, mkDangKy, mkDangKy2, sdtDangKy]);
+})
+
+
 //Tìm kiếm
 const xmarkIcons = document.querySelectorAll('.fa-xmark');
 
@@ -128,53 +202,7 @@ loginLink.addEventListener('click', function() {
         formBox.style.display = 'block'
         formBox2.style.display = 'none'
     }
-})
-
-// //Js thêm vào giỏ
-// let cacNutThemVaoGioHang = document.querySelectorAll('.buy');
-
-// cacNutThemVaoGioHang.forEach(function(nut) {
-//     nut.addEventListener('click', function(event) {
-//         // event.preventDefault();
-//         let card = nut.closest('.card');
-//         let anhSanPham = card.querySelector('.banchay-img img').getAttribute('src');
-//         let tenSanPham = card.querySelector('.name-card').textContent.trim();
-//         let giaSanPham = card.querySelector('.price-card').textContent.trim();
-
-//         let sanPhamMoi = document.createElement('a');
-//         sanPhamMoi.setAttribute('href', '#');
-//         sanPhamMoi.classList.add('sanpham-themvao');
-
-//         let hinhanhThongTin = document.createElement('div');
-//         hinhanhThongTin.classList.add('hinhanh-thongtin');
-
-//         let anhHinhanh = document.createElement('div');
-//         anhHinhanh.classList.add('hinhanh-sp');
-
-//         let img = document.createElement('img');
-//         img.setAttribute('src', anhSanPham);
-//         img.setAttribute('alt', '');
-//         img.style.width = '70px';
-//         img.style.height = '60px';
-
-//         let pTag = document.createElement('p');
-//         pTag.textContent = tenSanPham;
-
-//         let spanTag = document.createElement('span');
-//         spanTag.textContent = giaSanPham;
-//         spanTag.classList.add('text-red');
-
-//         anhHinhanh.appendChild(img);
-//         hinhanhThongTin.appendChild(anhHinhanh);
-//         hinhanhThongTin.appendChild(pTag);
-//         sanPhamMoi.appendChild(hinhanhThongTin);
-//         sanPhamMoi.appendChild(spanTag);
-
-//         let headingGioHang = document.querySelector('.heading-giohang');
-//         headingGioHang.insertAdjacentElement('afterend', sanPhamMoi);
-//     });
-// });
-    
+}) 
 
 // Count Down
 function countDown() {   
@@ -227,7 +255,7 @@ var cardWidth = $('.carousel-item-flash-sale').innerWidth();
 
 var scrollPosition = 0;
 
-$('.carousel-control-next').on('click', function() {
+$('.next-flash-sale').on('click', function() {
     if (scrollPosition < (carouselWidth - (cardWidth * 5))) {
 
         scrollPosition = scrollPosition + cardWidth;
@@ -235,10 +263,42 @@ $('.carousel-control-next').on('click', function() {
     }
 });
 
-$('.carousel-control-prev').on('click', function() {
+$('.prev-flash-sale').on('click', function() {
     if (scrollPosition > 0) {
 
         scrollPosition = scrollPosition - cardWidth;
         $('.carousel-flash-sale').animate({scrollLeft: scrollPosition}, 300);
+    }
+});
+
+
+
+// Liên kết đến trang lọc nd đã chọn DanhMuc -> iPhone -> Sp Iphone
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const phoneLinks = document.querySelectorAll('.item-danhmuc-cap2');
+    
+    phoneLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const brandName = this.textContent.trim(); 
+            filterByBrand(brandName); 
+        });
+    });
+
+    const danhMucItems = document.querySelectorAll('.danh-muc-item');
+
+    danhMucItems.forEach(item => {
+        const itemInner = item.querySelector('.item-inner');
+        item.addEventListener('click', function(event) {
+            event.preventDefault(); 
+            const brandName = itemInner.textContent.trim(); 
+            filterByBrand(brandName); 
+        });
+    });
+
+
+    function filterByBrand(brandName) {
+        window.location.href = `DanhMuc/danhMuc.html?brand=${brandName}`;
     }
 });
