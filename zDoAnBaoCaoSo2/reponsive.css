@@ -5,5 +5,47 @@
 
 /* Điện thoại */
 @media screen and (max-width: 739px) {
-    
+    .head-search {
+        display: none;
+    }
+
+    .click-giohang {
+        margin: 0 auto 10px auto;
+    }
+
+    .row-cols-md-6 col {
+        width: 50%;
+    }
+
+    .carousel-flash-sale .carousel-item {
+        display: block;
+        margin: 0;
+        flex: 0 0 calc((100% / 2));
+    }
+
+    #danhmuc {
+        display: none;
+    }
+
+    .input-thongtin-khuyenmai input {
+        height: 44px;
+        width: 50%;
+        border-radius: 30px;
+        padding: 10px 20px;
+        border: 2px solid #E3E3E3;
+        outline: none;
+        padding-right: 80px;
+    }
+
+    .input-thongtin-khuyenmai button {
+        position: absolute;
+        height: 44px;
+        width: 100px;
+        padding: 10px;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        background-color: #0D6EFD;
+        right: 242px;
+    }
 }

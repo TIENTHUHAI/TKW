@@ -444,9 +444,9 @@ function updateInput(){
 const btnAn = document.querySelector(".NutAn")
 const btnshow = document.querySelector(".Nuthien")
 btnshow.addEventListener("click",function(){
-    document.querySelector(".GioHang").style.right="0"
+    document.querySelector(".GioHang").style.display="block"
 })
 btnAn.addEventListener("click",function(){
-    document.querySelector(".GioHang").style.right="-100%"
+    document.querySelector(".GioHang").style.display="none"
 })
 
