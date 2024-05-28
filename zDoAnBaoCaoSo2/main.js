@@ -98,7 +98,7 @@ setInterval(nextImage, 3000);
         e.preventDefault();
     
         let isEmptyError2 = checkEmptyError([tenDangKy, mkDangKy, mkDangKy2, sdtDangKy]);
-        // let isEmailError = checkEmailError(emailDangKy);
+        let isEmailError = checkEmailError(emailDangKy);
         let isPasswordMatch = checkPasswordMatch(mkDangKy, mkDangKy2);
     
         if (!isEmptyError2 && isPasswordMatch) {
@@ -254,7 +254,7 @@ loginLink.addEventListener('click', function() {
 // Count Down
 function countDown() {   
     var today = new Date().getTime();
-    var FourDays = ((4*1000*60*60*24));
+    var FourDays = ((4*1000*60*60*24)); // 1000 1s * 60 60s * 60 *60p * 24
     var addFourDay = new Date(today + FourDays);
     addFourDay.setHours(18);
     addFourDay.setMinutes(50);
@@ -376,7 +376,7 @@ function addGioHang(producImg,productTenSP,productGiaSP){
         }
     }
     var addSP = document.createElement("tr")
-    var SP = '<tr><td style="display: flex;align-items: center; width: 198px;"><img style="width: 70px;" src="'+producImg+'" alt=""><span class="KiemTraTenSP">'+productTenSP+'</span></td><td><span class="value">'+productGiaSP+'</span></td><td><input style="width: 30px;outline: none;" type="number" value="1" min="1"></td><td style="cursor: pointer;"><i class="deleteSP delete fa-solid fa-trash"></i></td></tr>'
+    var SP = '<tr><td style="display: flex;align-items: center; width: 198px;"><img style="width: 70px;" src="'+producImg+'" alt=""><span class="KiemTraTenSP">'+productTenSP+'</span></td><td><span class="value">'+productGiaSP+'</span></td><td><input style="width: 30px;outline: none; padding-left: 6px; margin-left: 4px" type="number" value="1" min="1"></td><td style="cursor: pointer;"><i class="deleteSP delete fa-solid fa-trash"></i></td></tr>'
     addSP.innerHTML = SP 
     var listSP = document.querySelector("tbody")
     var firstSP = listSP.firstChild;
@@ -430,6 +430,14 @@ function deleteSP(){
             TinhTIen()
         })
     }
+    var deleteAllBtn = document.querySelector(".deleteAll");
+    deleteAllBtn.addEventListener("click", function () {
+      var SanPham = document.querySelectorAll("tbody tr");
+      for (var i = 0; i < SanPham.length; i++) {
+        SanPham[i].remove();
+      }
+      TinhTIen();
+    });
 }
 function updateInput(){
     var SanPham = document.querySelectorAll("tbody tr")
@@ -449,4 +457,8 @@ btnshow.addEventListener("click",function(){
 btnAn.addEventListener("click",function(){
     document.querySelector(".GioHang").style.display="none"
 })
+
+document.querySelector('.icon-bars').addEventListener('click', function() {
+    document.querySelector('.nav').classList.toggle('active');
+});
 

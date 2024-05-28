@@ -48,4 +48,75 @@
         background-color: #0D6EFD;
         right: 242px;
     }
+
+    .prev-flash-sale {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        font-size: 32px;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        left: -20px;
+        opacity: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .next-flash-sale {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        font-size: 32px;
+        background-color: #f3f3f3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        right: -20px;
+        opacity: 1;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+
+    .nav {
+        display: none;
+    }
+    
+    .icon-bars {
+        height: 50px;
+        width: 50px;
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 10%;
+        left: 25px;
+        margin-top: 20px;
+    }
+
+    .nav-deals,
+    .nav-support {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        justify-content: center;
+    }
+    
+    .nav.active {
+        display: flex;
+    }
+    
+    
+
 }

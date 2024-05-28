@@ -305,7 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var listName = JSON.parse(localStorage.getItem('listName'))
     
-// Lấy danh sách tên sản phẩm từ localStorage và tạo ra các phần tử gợi ý
+
+
+
     var goiySearch = document.querySelector('.box-goi-y')
     for(var i = 0; i < listName.length; i++) {
         var goiY = document.createElement('a')
@@ -353,9 +355,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     doDaiBoxGoiY[i].style.display = "none"
                 }
-            } 
+            }
+            var headSearch = document.querySelector('.head-search-input')
+            document.addEventListener('click', function(e) {
+                if(e.target != goiySearch && e.target != headSearch)
+                    {
+                        goiySearch.style.display = 'none'
+                    }
+                else    
+                {
+                    goiySearch.style.display = ''
+                }
+            })
         }
     }
+
+    
 
     document.querySelector('.form-search').addEventListener('submit', function(event) {
         event.preventDefault();

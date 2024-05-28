@@ -11,7 +11,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reponsive.css">
-    <title>Document</title>
+    <title>TanTienStore - Cửa hàng điện tử</title>
 
     <style>
         .mt-50 {
@@ -103,15 +103,6 @@
             margin-top: 8px;
             text-align: end;
         }
-
-        .KiemTraTenSP {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-align: start;
-            margin-left: 10px;
-        }
     </style>
 </head>
 <body>
@@ -158,12 +149,12 @@
                     
 
                     <div class="head-right">
-                        <div class="head-right-item gio-hang Nuthien">
-                            <!-- <a href="#"> -->
+                        <div class="head-right-item gio-hang ">
+                            <a href="#" class="Nuthien">
                                 <i style="cursor: pointer;" class=" cart fa-solid fa-cart-shopping">
                                     <span>0</span>
                                 </i>
-                            <!-- </a> -->
+                            </a>
                             <div class="thongtin-giohang">
                                 <div class="heading-giohang">
                                     <h5>Sản phẩm mới thêm vào giỏ</h5>     
@@ -204,7 +195,7 @@
                             <a href="#" class="user-login-register" style="position: relative;">
                                 <i class="fa-solid fa-user"></i>
                                 <br>
-                                <p style="width: 100px; position: absolute; right: -44px; color: white; font-weight: 500;">Đăng nhập</p>
+                                <p style="width: 100px; position: absolute; right: -55px; color: white; font-weight: 500;">Đăng nhập</p>
                             </a>
                             <div class="login-success" style="display: none;">
                                 <img src="accest/image/my-avatar.jpg" style="width: 32px; height: 32px; border-radius: 50%;" alt="">
@@ -332,6 +323,7 @@
     <!-- Nav -->
     <div id="navigation">
         <div class="container-md">
+            <i class="icon-bars fa-solid fa-bars"></i>
             <div class="nav">
                 <div class="nav-deals">
                     <span>
@@ -342,7 +334,7 @@
                     </a>
                 </div>
 
-                <ul class="d-md-flex d-none nav-list nav-list-cap1">
+                <ul class="nav-list nav-list-cap1">
                     <li class="nav-item fs-5">
                         <a href="#">
                             Trang chủ
@@ -2236,12 +2228,16 @@
                         <td style="cursor: pointer;">Xoá</td>
                     </tr> -->
                 </tbody>
-                
             </table> 
             <div class="TongTien">
                 <p><b style="margin-right: 4px;">Tổng tiền:</b><span>0</span><sup>₫</sup></p>
             </div>
-            <button style="" class="btn btn-danger">Mua Hàng</button>
+            
+                <button style="position: relative;" class="btn btn-danger">Mua Hàng</button>
+                    <i  style="cursor: pointer; right: 0;position:absolute;" class=" deleteAll fa-solid fa-trash">All</i>
+                    <!-- <span style="position: absolute;right: 0;">ALL</span> -->
+                <!-- </div> -->
+            
         </form>
     </section>
 

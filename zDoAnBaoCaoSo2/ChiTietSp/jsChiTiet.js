@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Nếu có video, hiển thị video, nếu không, hiển thị hình ảnh
-        if (product.video) {
+        if (product.video != '') {
             document.getElementById('product-image').src = product.video;
         } else {
             document.getElementById('product-image').src = product.image;
